@@ -18,7 +18,8 @@ a:hover
 
 body
 {
-	color: #c9c9c8;
+	color: #a9a9a8;
+	/* color: #c9c9c8; */
 	font-family: tahoma, sans-serif;
 	font-size: 11px;
 	background: #000 url('/images/back.jpg') repeat-x;
@@ -34,6 +35,11 @@ h1
 	font-size: 20px;
 	font-weight: normal;
 	padding: 0 5px 0 5px;
+}
+
+img
+{
+	border: 0;
 }
 
 p
@@ -120,7 +126,7 @@ div#wrapper
 
 	div#header
 	{
-		background: #000 url('../images/header.png');
+		background: #000;
 		height: 313px;
 	}
 
