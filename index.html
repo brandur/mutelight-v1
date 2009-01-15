@@ -1,0 +1,11 @@
+---
+layout: default
+title: Mutelight
+---
+
+		<h1>New Articles</h1>
+		<ul class="article">
+			{% for post in site.posts %}
+			<li><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <span class="alternate">&mdash; {{ post.date | date_to_string }}</span></li>
+			{% endfor %}
+		</ul>

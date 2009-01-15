@@ -1,0 +1,14 @@
+---
+layout: post
+title: Test Post
+---
+
+h1. {{ page.title }}
+
+<div class="content">
+
+Here is paragraph 1.
+
+Here is paragraph 2.
+
+</div>
