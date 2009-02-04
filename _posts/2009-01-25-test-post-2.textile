@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Test Post
-permalink: /articles/test-post.html
+title: Test Post 2
+permalink: /articles/test-post-2.html
 ---
 
 Here is paragraph 1. And some additional content.
