@@ -75,9 +75,13 @@ div.secondary_content
 	font-family: arial, sans-serif;
 	line-height: 1.5em;
 	font-size: 12px;
+    /*
 	border-bottom: 1px solid #3c253b;
 	border-top: 1px solid #3c253b;
-	padding: 0 5px 0px 5px;
+    */
+	border: 1px solid #3c253b;
+    background-color: #240d23;
+	padding: 0 9px 0px 9px;
 }
 
 img.social_icon
@@ -124,6 +128,21 @@ ul.content li
 {
 	padding: 7px 5px 7px 5px;
 	border-bottom: 1px solid #1f081e;
+    vertical-align: middle;
+}
+
+ul.secondary_content
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0 0 10px 0;
+	border-top: 1px solid #2f182e;
+}
+
+ul.secondary_content li
+{
+	padding: 7px 5px 7px 5px;
+	border-bottom: 1px solid #2f182e;
     vertical-align: middle;
 }
 
