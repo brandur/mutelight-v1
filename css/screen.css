@@ -86,7 +86,7 @@ div.secondary_content
 
 img.social_icon
 {
-    float: left;
+    vertical-align: middle;
     margin: 0 5px 0 0;
 }
 
@@ -131,19 +131,23 @@ ul.content li
     vertical-align: middle;
 }
 
-ul.secondary_content
+ul.social
 {
 	list-style-type: none;
-	margin: 0;
-	padding: 0 0 10px 0;
+    display: table;
+    width: 100%;
+	margin: 0 0 10px 0;
+	padding: 0;
 	border-top: 1px solid #2f182e;
+	border-bottom: 1px solid #2f182e;
 }
 
-ul.secondary_content li
+ul.social li
 {
+    display: table-cell;
 	padding: 7px 5px 7px 5px;
-	border-bottom: 1px solid #2f182e;
     vertical-align: middle;
+    text-align: center;
 }
 
 /*****************************************************************************/
