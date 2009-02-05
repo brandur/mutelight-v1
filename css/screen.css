@@ -54,10 +54,15 @@ p
 	color: #7d7b88;
 }
 
+.mail
+{
+    color: #fff;
+}
+
 .important
 {
     color: #fff;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 div.content
@@ -68,20 +73,6 @@ div.content
 	border-bottom: 2px solid #3c253b;
 	border-top: 2px solid #3c253b;
 	padding: 0 5px 0px 5px;
-}
-
-div.secondary_content
-{
-	font-family: arial, sans-serif;
-	line-height: 1.5em;
-	font-size: 12px;
-    /*
-	border-bottom: 1px solid #3c253b;
-	border-top: 1px solid #3c253b;
-    */
-	border: 1px solid #3c253b;
-    background-color: #240d23;
-	padding: 0 9px 0px 9px;
 }
 
 img.social_icon
@@ -157,6 +148,17 @@ div#wrapper
 	width: 464px;
 	margin: 0 auto;
 }
+
+    div#about
+    {
+        font-family: arial, sans-serif;
+        line-height: 1.5em;
+        font-size: 12px;
+        background-color: #240d23;
+        border: 1px solid #3c253b;
+        margin: 9px 0 0 0;
+        padding: 0 9px 0px 9px;
+    }
 
 	div#header
 	{
