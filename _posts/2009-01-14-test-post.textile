@@ -7,3 +7,20 @@ permalink: /articles/test-post.html
 Here is paragraph 1. And some additional content.
 
 Here is paragraph 2.
+
+{% highlight csharp %}
+/**
+ * Simple program to calculate the area of a circle. Note that none of this 
+ * actually does anything. Have fun.
+ * @author narape
+ */
+public class CalcAreaCirculo {
+
+    public static void main(String[] args) {
+        double radio = 20;
+        double area;
+                
+        ...
+{% endhighlight %}
+
+Another line underneath.
