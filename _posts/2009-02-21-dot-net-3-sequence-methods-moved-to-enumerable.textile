@@ -1,0 +1,20 @@
+
+---
+title: .NET 3.5 Sequence Methods Moved to Enumerable
+permalink: /articles/dot-net-3-sequence-methods-moved-to-enumerable.html
+layout: post
+---
+
+I still see a lot of C# code samples around online that use <tt>Sequence.Range</tt> to generate a numerical range and <tt>Sequence.Repeat</tt> to repeat a number. This is a little confusing, because these methods may have been around in the early days of .NET 3.0, but have since moved to <tt>System.Linq.Enumerable</tt>.
+
+{% highlight csharp %}
+// Generate a range of integers
+// This will enumerate 3, 4, 5, 6, 7, 8, 9
+IEnumerable<int> nums = Enumerable.Range(3, 7);
+
+// Repeat any value a given number of times
+// This will enumerate 5, 5, 5
+IEnumerable<int> fives = Enumerable.Repeat(5, 3);
+// This will enumerate "string", "string"
+IEnumerable<string> strings = Enumerable.Repeat("string", 2);
+{% endhighlight %}
