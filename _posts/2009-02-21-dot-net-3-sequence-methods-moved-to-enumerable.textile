@@ -7,7 +7,11 @@ layout: post
 
 I still see a lot of C# code samples around online that use <tt>Sequence.Range</tt> to generate a numerical range and <tt>Sequence.Repeat</tt> to repeat a number. This is a little confusing, because these methods may have been around in the early days of .NET 3.0, but have since moved to <tt>System.Linq.Enumerable</tt>.
 
+Shown below is today's correct usage for <tt>Range</tt> and <tt>Repeat</tt>.
+
 {% highlight csharp %}
+using System.Linq;
+
 // Generate a range of integers
 // This will enumerate 3, 4, 5, 6, 7, 8, 9
 IEnumerable<int> nums = Enumerable.Range(3, 7);
