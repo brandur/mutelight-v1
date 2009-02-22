@@ -1,9 +1,0 @@
----
-layout: post
-title: Test Post 2
-permalink: /articles/test-post-2.html
----
-
-Here is paragraph 1. And some additional content.
-
-Here is paragraph 2.
