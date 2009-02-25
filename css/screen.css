@@ -54,6 +54,11 @@ p
 	color: #7d7b88;
 }
 
+.hide
+{
+    display: none;
+}
+
 .mail
 {
     color: #fff;
@@ -74,6 +79,13 @@ div.content
 	border-top: 2px solid #3c253b;
 	padding: 0 5px 0px 5px;
 }
+
+    p.meta
+    {
+        color: #7d7b88;
+        font-size: 8pt; 
+        font-style: italic;
+    }
 
 ul.article
 {
@@ -142,13 +154,5 @@ div#wrapper
         border: 0;
         padding: 0;
 	}
-
-/*
-	div#main
-	{
-		width: 458px;
-		margin: 0 auto;
-	}
-*/
 
 /*****************************************************************************/

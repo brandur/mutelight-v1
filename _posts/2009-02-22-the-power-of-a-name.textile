@@ -1,6 +1,7 @@
 ---
 title: The Power of a Name
 permalink: articles/the-power-of-a-name.html
+location: Calgary
 layout: post
 ---
 
