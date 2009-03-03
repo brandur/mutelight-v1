@@ -1,6 +1,6 @@
 ---
-title: Song 2 is Radio's Favourite Song
-permalink: /articles/song-2-is-radios-favourite-song.html
+title: Song 2 is Radio's Favourite Track
+permalink: /articles/song-2-is-radios-favourite-track.html
 location: Calgary
 layout: post
 ---
