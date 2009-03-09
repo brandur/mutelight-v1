@@ -6,9 +6,9 @@ location: Calgary
 layout: post
 ---
 
-I still see a lot of C# code samples around online that use <tt>Sequence.Range</tt> to generate a numerical range and <tt>Sequence.Repeat</tt> to repeat a number. This is a little confusing, because these methods may have been around in the early days of .NET 3.0, but have since moved to <tt>System.Linq.Enumerable</tt>.
+I still see a lot of C# code samples around online that use @Sequence.Range@ to generate a numerical range and @Sequence.Repeat@ to repeat a number. This is a little confusing, because these methods may have been around in the early days of .NET 3.0, but have since moved to @System.Linq.Enumerable@.
 
-Shown below is today's correct usage for <tt>Range</tt> and <tt>Repeat</tt>.
+Shown below is today's correct usage for @Range@ and @Repeat@.
 
 {% highlight csharp %}
 using System.Linq;
