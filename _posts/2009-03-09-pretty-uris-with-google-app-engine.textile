@@ -8,7 +8,7 @@ layout: post
 
 Getting pretty URI/URLs in Google app engine is easy, but the first time I looked I wasn't able to figure out how to do it from Google's documentation, so I've saved some instructions here.
 
-The first step is to add in some regex capture groups when sending your URIs to @WSGIApplication@. The code below specifies that @ScoreHandler@ can receive either one argument like @/game/&lt;game_id&gt;/score@ or two arguments like @/game/&lt;game_id&gt;/score/&lt;score_id&gt;@.
+The first step is to add in some regex capture groups when sending your URIs to @WSGIApplication@. The code below specifies that @ScoreHandler@ can receive either one argument like @/game/<game_id>/score@ or two arguments like @/game/<game_id>/score/<score_id>@.
 
 {% highlight python %}
 from google.appengine.ext   import webapp
