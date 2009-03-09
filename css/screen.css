@@ -27,6 +27,11 @@ body
 	border: 0;
 }
 
+code
+{
+	color: #fff;
+}
+
 h1
 {
 	color: #bdbd8c;
@@ -45,11 +50,6 @@ img
 p
 {
 	text-align: justify;
-}
-
-tt
-{
-	color: #fff;
 }
 
 /*****************************************************************************/
