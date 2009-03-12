@@ -1,6 +1,7 @@
 
 ---
 title: New Features in C# 4.0
+tags: [ 'csharp', 'development', 'dotnet', 'python' ]
 permalink: /articles/new-features-in-c-sharp-4.html
 location: Calgary
 layout: post
@@ -206,7 +207,7 @@ IComparer<object> objComparer = GetComparer();
 IComparer<string> strComparer = objComparer;
 {% endhighlight %}
 
-Some things aout co- and contra-variance to remember:
+A few notes on co- and contra-variance to remember:
 
 * @in@ and @out@ are only supported for interfaces and delegate types
 * Value types are always invariant (@IEnumerable<int>@ cannot be stored to @IEnumerable<object>@)

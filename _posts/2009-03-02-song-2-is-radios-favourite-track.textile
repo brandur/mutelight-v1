@@ -1,5 +1,6 @@
 ---
 title: Song 2 is Radio's Favourite Track
+tags: [ 'music']
 permalink: /articles/song-2-is-radios-favourite-track.html
 location: Calgary
 layout: post
