@@ -1,7 +1,7 @@
 
 ---
 title: Pretty URIs with Google App Engine
-tags: [ 'googleappengine', 'python']
+tags: [ 'googleappengine', 'howto', 'python']
 permalink: /articles/pretty-uris-with-google-app-engine.html
 location: Calgary
 layout: post
