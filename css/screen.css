@@ -64,7 +64,7 @@ p
 strong
 {
 	color: #fff;
-    font-weight: bold;
+	font-weight: bold;
 }
 
 /*****************************************************************************/
@@ -100,45 +100,55 @@ div.content
 	padding: 0 5px 0px 5px;
 }
 
-    div.content ul, div.content ol
-    {
-        padding: 0 0 0 20px;
-    }
+	div.content ul, div.content ol
+	{
+		padding: 0 0 0 20px;
+	}
 
-        div.content ul li, div.content ol li
-        {
-            text-align: justify;
-            margin: 0 0 8px 0;
-        }
+		div.content ul li, div.content ol li
+		{
+			text-align: justify;
+			margin: 0 0 8px 0;
+		}
 
-	p.meta
+	div.content p.meta
 	{
 		color: #7d7b88;
 		font-size: 8pt; 
 		font-style: italic;
 	}
 
+	div.content p.quote
+	{
+		color: #fff;
+		font-style: italic;
+		margin-left: 12px;
+		margin-right: 12px;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
  
 div.figure
 {
-    background: #000; 
-    border: 1px solid #3c253b;
-    font-size: 8pt;
-    margin: 0;
-    padding: 14px 9px;
-    position: relative;
+	background: #000; 
+	border: 1px solid #3c253b;
+	font-size: 8pt;
+	margin: 0;
+	padding: 14px 9px;
+	position: relative;
 }
 
-    div.figure img
-    {
-        display: block;
-        margin: 20px auto;
-    }
+	div.figure img
+	{
+		display: block;
+		margin: 20px auto;
+	}
 
-    div.figure p
-    {
-        margin: 0;
-    }
+	div.figure p
+	{
+		margin: 0;
+	}
 
 ul.article
 {
