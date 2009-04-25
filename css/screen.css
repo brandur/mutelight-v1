@@ -4,6 +4,12 @@
 
 /*****************************************************************************/
 
+*
+{
+	/* fix for font rendering in Safari */
+	text-shadow: #000000 0 0 0px;
+}
+
 a:link, a:visited
 {
 	color: #7d7b88;
@@ -204,12 +210,40 @@ div#wrapper
 		font-family: arial, sans-serif;
 		line-height: 1.5em;
 		font-size: 12px;
-		background-color: #240d23;
+		background: #240d23;
 		position: relative;
 		top: 9px;
-		border: 1px solid #3c253b;
-		padding: 1px 9px 0 9px;
+		height: 230px;
+		padding: 3px 12px 0 12px;
+		/* all opacity attributes */
+		opacity: 0.5;
+		filter:alpha(opacity=50);
+		-moz-opacity:0.5;
+		-khtml-opacity: 0.5;
 	}
+
+		div#about div#articles
+		{
+			float: right;
+			vertical-align: bottom;
+		}
+
+		div#about div#articles a
+		{
+			text-decoration: none;
+			display: block;
+			text-align: center;
+			line-height: 22px;
+			background: #341d33;
+			width: 80px;
+			margin: -2px 0 0 0;
+		}
+
+			div#about div#articles a:hover
+			{
+				color: #fff;
+				background: #442d43;
+			}
 
 	div#header
 	{
