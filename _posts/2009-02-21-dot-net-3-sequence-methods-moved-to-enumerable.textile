@@ -2,6 +2,7 @@
 title: .NET 3.5 Sequence Methods Moved to Enumerable
 tags: [ 'csharp', 'development', 'dotnet' ]
 permalink: /articles/dot-net-3-sequence-methods-moved-to-enumerable.html
+tiny: /s/1
 location: Calgary
 layout: post
 ---

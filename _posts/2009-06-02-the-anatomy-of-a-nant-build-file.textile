@@ -2,6 +2,7 @@
 title: The Anatomy of a NAnt Build File
 tags: [ development', 'dotnet', 'nant' ]
 permalink: /articles/the-anatomy-of-a-nant-build-file.html
+tiny: /s/10
 location: Calgary
 layout: post
 ---

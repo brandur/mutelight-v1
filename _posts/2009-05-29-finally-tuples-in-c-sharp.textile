@@ -2,6 +2,7 @@
 title: 'FINALLY: Tuples in C#'
 tags: [ 'csharp', 'development', 'dotnet' ]
 permalink: /articles/finally-tuples-in-c-sharp.html
+tiny: /s/9
 location: Calgary
 layout: post
 ---

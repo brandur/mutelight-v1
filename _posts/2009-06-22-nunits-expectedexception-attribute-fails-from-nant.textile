@@ -2,6 +2,7 @@
 title: NUnit's ExpectedException Attribute Fails from NAnt
 tags: [ 'development', 'dotnet', 'testing' ]
 permalink: /articles/nunits-expectedexception-attribute-fails-from-nant.html
+tiny: /s/12
 location: Calgary
 layout: post
 ---

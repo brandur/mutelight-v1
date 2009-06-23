@@ -2,6 +2,7 @@
 title: Using the Invoke Design Pattern with Anonymous Methods
 tags: [ 'csharp', 'howto' ]
 permalink: /articles/using-the-invoke-design-pattern-with-anonymous-methods.html
+tiny: /s/8
 location: Calgary
 layout: post
 ---
