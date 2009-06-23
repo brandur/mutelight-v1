@@ -1,4 +1,3 @@
-
 ---
 title: .NET 3.5 Sequence Methods Moved to Enumerable
 tags: [ 'csharp', 'development', 'dotnet' ]
