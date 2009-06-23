@@ -1,0 +1,300 @@
+/*
+ * Mutelight
+ */
+
+/*
+ 
+This file is meant to be compiled to CSS with Less:
+    http://lesscss.org/
+
+Install the Ruby gem:
+    gem install less
+
+Then compile to CSS:
+    lessc screen.less
+
+*/
+
+/*****************************************************************************/
+
+/* color used for headers: h1, h2, etc. */
+@header_color: #bdbd8c;
+
+/* primary text color, used for main text body */
+@primary_color: #a9a9a8;
+
+/* secondary text color, used for links, alternate text, etc. */
+@secondary_color: #7d7b88;
+
+/* tertiary text color, used when primary and secondary won't do */
+@tertiary_color: #5d5b68;
+
+/* color used for various borders */
+@border_color: #3c253b;
+ 
+/*****************************************************************************/
+
+*
+{
+	/* fix for font rendering in Safari */
+	text-shadow: #000000 0 0 0px;
+}
+
+a
+{
+    color: @secondary_color;
+}
+
+a:link, a:visited
+{
+	text-decoration: underline;
+}
+
+a:hover
+{
+	text-decoration: none;
+}
+
+body
+{
+	color: @primary_color;
+	font-family: tahoma, sans-serif;
+	font-size: 11px;
+	background: #000 url('/images/back.jpg') repeat;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+code
+{
+	color: #fff;
+}
+
+img
+{
+	border: 0;
+	margin: 0;
+}
+
+p
+{
+	text-align: justify;
+}
+
+strong
+{
+	color: #fff;
+	font-weight: bold;
+}
+
+/*****************************************************************************/
+
+div#radial
+{
+	background: transparent url('/images/radial.jpg') no-repeat;
+	width: 868px;
+	margin: 0 auto;
+
+    div#wrapper
+    {
+        width: 478px;
+        margin: 0 auto;
+
+        h1
+        {
+            color: @header_color;
+            font-family: georgia, serif;
+            font-size: 20px;
+            font-weight: normal;
+            padding: 0 12px;
+        }
+
+        .alternate
+        {
+            color: @secondary_color;
+        }
+
+        .hide
+        {
+            display: none;
+        }
+
+        .mail
+        {
+            color: #fff;
+        }
+
+        .important
+        {
+            color: #fff;
+            font-size: 13px;
+        }
+
+        div.content
+        {
+            font-family: arial, sans-serif;
+            line-height: 1.5em;
+            font-size: 12px;
+            border-bottom: 2px solid @border_color;
+            border-top: 2px solid @border_color;
+            margin: 0 7px;
+            padding: 0 5px;
+
+            h2
+            {
+                color: @header_color;
+                font-family: georgia, serif;
+                font-size: 17px;
+                font-weight: normal;
+                padding: 0;
+            }
+
+            div.figure
+            {
+                background: #000; 
+                border: 1px solid @border_color;
+                font-size: 8pt;
+                margin: 0;
+                padding: 14px 16px;
+                position: relative;
+
+                img
+                {
+                    display: block;
+                    margin: 20px auto;
+                }
+
+                p
+                {
+                    margin: 0;
+                }
+            }
+
+            ul, ol
+            {
+                padding: 0 0 0 20px;
+
+                ul li, ol li
+                {
+                    text-align: justify;
+                    margin: 0 0 8px 0;
+                }
+            }
+
+            p.meta
+            {
+                color: @secondary_color;
+                font-size: 8pt; 
+                font-style: italic;
+            }
+
+            p.quote
+            {
+                color: #fff;
+                font-style: italic;
+                margin: 20px 19px;
+            }
+
+            span.postscript
+            {
+                color: @tertiary_color;
+            }
+
+            /* is this used for anything? can probably get rid of it */
+            ul.content
+            {
+                list-style-type: none;
+                margin: 0;
+                padding: 0 0 10px 0;
+                border-top: 1px solid #1f081e;
+
+                li
+                {
+                    padding: 7px 10px;
+                    border-bottom: 1px solid #1f081e;
+                    vertical-align: middle;
+                }
+            }
+        }
+
+        div#about
+        {
+            font-family: arial, sans-serif;
+            line-height: 1.5em;
+            font-size: 12px;
+            background: #20232d;
+            position: relative;
+            top: 9px;
+            height: 250px;
+            margin: 0 10px;
+            padding: 3px 10px 0 10px;
+            /* all opacity attributes */
+            opacity: 0.8;
+            filter:alpha(opacity=80);
+            -moz-opacity:0.8;
+            -khtml-opacity: 0.8;
+
+            div#articles
+            {
+                float: right;
+                vertical-align: bottom;
+
+                a
+                {
+                    text-decoration: none;
+                    display: block;
+                    text-align: center;
+                    line-height: 22px;
+                    background: #30333d;
+                    width: 80px;
+                    margin: -2px 0 0 0;
+                }
+
+                a:hover
+                {
+                    color: #fff;
+                    background: #50535d;
+                }
+            }
+        }
+
+        div#header
+        {
+            height: 313px;
+            border: 0;
+            padding: 0;
+        }
+
+        ul.article
+        {
+            list-style-type: none;
+            margin: 0 10px 0 10px;
+            padding: 0 0 10px 0;
+            border-top: 1px solid @border_color;
+
+            li
+            {
+                padding: 7px 10px;
+                border-bottom: 1px solid @border_color;
+
+                a
+                {
+                    color: #c9c9c8;
+                }
+
+                a:link, a:visited
+                {
+                    text-decoration: none;
+                }
+
+                a:hover
+                {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+/*****************************************************************************/
