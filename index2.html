@@ -5,7 +5,7 @@ title: Mutelight
 
 		<h1>Newest Articles</h1>
 		<ul class="article">
-			{% for post in site.posts %}
+			{% for post in site.posts limit:10 %}
 			<li><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <span class="alternate">&mdash; {{ post.date | date: "%B %d, %Y" }}</span></li>
 			{% endfor %}
 		</ul>
