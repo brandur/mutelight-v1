@@ -118,6 +118,11 @@ div.content
 			margin: 0 0 8px 0;
 		}
 
+    div.content .postscript
+    {
+        color: #5d5b68;
+    }
+
 	div.content p.meta
 	{
 		color: #7d7b88;
