@@ -19,7 +19,7 @@ I'm finding that a lot of people don't seem to know about the alternate "shortha
 _myButton.Click += myButton_Click;
 {% endhighlight %}
 
-I mention this because I feel that the shorthand syntax is preferable in a number of ways, including simply that it's shorter and eliminates some of the normal boilerplate cruft, leaving you with more readable code. It's also easier to understand for developers new to C#. Consider the following:
+I mention this because I feel that the shorthand syntax is preferable in a number of ways, starting with the fact that it's shorter, therefore eliminating some of the normal boilerplate cruft and leaving you with more readable code. It's also easier to understand for developers new to C#. Consider the following:
 
 {% highlight csharp %}
 _myButton.Click += new EventHandler(myButton_Click);
