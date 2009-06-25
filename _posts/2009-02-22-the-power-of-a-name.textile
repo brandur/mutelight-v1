@@ -2,7 +2,7 @@
 title: The Power of a Name
 tags: [ 'communication', 'dalecarnegie' ]
 permalink: /articles/the-power-of-a-name.html
-tiny: /s/2
+tiny: /a/2
 location: Calgary
 layout: post
 ---

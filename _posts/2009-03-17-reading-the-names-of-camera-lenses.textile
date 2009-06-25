@@ -2,7 +2,7 @@
 title: Reading the Names of Camera Lenses
 tags: [ 'howto', 'photography' ]
 permalink: /articles/reading-the-names-of-camera-lenses.html
-tiny: /s/7
+tiny: /a/7
 location: Calgary
 layout: post
 ---

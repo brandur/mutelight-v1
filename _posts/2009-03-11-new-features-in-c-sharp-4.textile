@@ -2,7 +2,7 @@
 title: New Features in C# 4.0
 tags: [ 'csharp', 'development', 'dotnet', 'python' ]
 permalink: /articles/new-features-in-c-sharp-4.html
-tiny: /s/5
+tiny: /a/5
 location: Calgary
 layout: post
 ---

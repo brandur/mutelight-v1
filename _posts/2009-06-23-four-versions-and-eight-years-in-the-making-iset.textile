@@ -2,7 +2,7 @@
 title: "Four Versions and Eight Years in the Making: ISet"
 tags: [ 'csharp', 'development', 'dotnet' ]
 permalink: /articles/four-versions-and-eight-years-in-the-making-iset.html
-tiny: /s/13
+tiny: /a/13
 location: Calgary
 layout: post
 ---

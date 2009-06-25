@@ -2,7 +2,7 @@
 title: Printing Binary in C#
 tags: [ 'csharp', 'development', 'dotnet' ]
 permalink: /articles/printing-binary-in-c-sharp.html
-tiny: /s/11
+tiny: /a/11
 location: Calgary
 layout: post
 ---
