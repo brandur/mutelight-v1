@@ -29,6 +29,9 @@ Then compile to CSS:
 /* tertiary text color, used when primary and secondary won't do */
 @tertiary_color: #5d5b68;
 
+/* color used for highlights */
+@highlight_color: #fff;
+
 /* color used for various borders */
 @border_color: #3c253b;
  
@@ -68,7 +71,7 @@ body
 
 code
 {
-    color: #fff;
+    color: @highlight_color;
 }
 
 img
@@ -84,7 +87,7 @@ p
 
 strong
 {
-    color: #fff;
+    color: @highlight_color;
     font-weight: bold;
 }
 
@@ -122,12 +125,12 @@ div#radial
 
         .mail
         {
-            color: #fff;
+            color: @highlight_color;
         }
 
         .important
         {
-            color: #fff;
+            color: @highlight_color;
             font-size: 13px;
         }
 
@@ -202,6 +205,14 @@ div#radial
                 }
             }
 
+            p.footnote
+            {
+                sup
+                {
+                    color: @highlight_color;
+                }
+            }
+
             p.meta
             {
                 color: @secondary_color;
@@ -211,12 +222,12 @@ div#radial
 
             p.quote
             {
-                color: #fff;
+                color: @highlight_color;
                 font-style: italic;
                 margin: 20px 19px;
             }
 
-            span.postscript
+            span.addendum
             {
                 color: @tertiary_color;
             }
@@ -257,7 +268,7 @@ div#radial
 
                 a:hover
                 {
-                    color: #fff;
+                    color: @highlight_color;
                     background: #50535d;
                 }
             }
