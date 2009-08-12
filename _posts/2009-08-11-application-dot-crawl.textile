@@ -1,0 +1,33 @@
+---
+title: Application.Crawl()
+tags: [ 'csharp', 'development', 'dotnet' ]
+permalink: /articles/application-dot-crawl.html
+tiny: /a/16
+location: Calgary
+layout: post
+---
+
+Most .NET developers are familiar with the standard entry point of a WinForms application:
+
+{% highlight csharp %}
+Application.Run(new MainForm());
+{% endhighlight %}
+
+I've been finding recently that the name of this method is rapidly becoming outdated as modern Microsoft technology finds its way into more applications. Developers like myself can get the wrong idea about what this method actually does while skimming source code. Therefore, I respectfully propose that Microsoft obsoletes the @Run@ method, and replaces it with something a little more true to form:
+
+{% highlight csharp %}
+Application.Crawl(new MainForm());
+{% endhighlight %}
+
+This insight comes from my recent experience installing Expression Blend 3. I'd previously noticed that Microsoft applications seemed to be getting slower after installing the beta for Visual Studio 2010[1], but Microsoft has really taken the Blend installer to the next level.
+
+Close to 100% of a single core was eaten up for the entire half-hour install process of Blend. The slowdown was so extreme that my mouse cursor skipped around the screen in 20 pixel increments as I made futile attempts to continue my other work. For the record, I'm running a Core 2 E8400 @ 3.00 GHz with 4 GB of memory.
+
+<div class="figure">
+    <a href="/images/posts/2009-08-11-application-dot-crawl/cpu-eater-3.png" title="Link to full-size image"><img src="/images/posts/2009-08-11-application-dot-crawl/cpu-eater-3-small.png" alt="Sus microprocessorius, more widely known as the common CPU hog, in its natural habitat" /></a>
+    <p>*Fig. 1:* _Sus microprocessorius,_ more widely known as the common CPU hog, in its natural habitat</p>
+</div>
+
+The good news is that Expression Blend itself seems to be very usable. Next week I promise to write about something more constructive.
+
+fn1. VS 2010 is a beta release. Some performance improvements are bound to make it into the final product.
