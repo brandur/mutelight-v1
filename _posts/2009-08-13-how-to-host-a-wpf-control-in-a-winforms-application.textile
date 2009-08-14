@@ -24,8 +24,8 @@ ElementHost host = new ElementHost()
     Dock      = DockStyle.Fill, 
 };
 
-/* now add the ElementHost to our controls collection normally 
- */
+/* now add the ElementHost to our controls collection 
+ * normally */
 Controls.Add(host);
 {% endhighlight %}
 
@@ -45,8 +45,8 @@ Similarly, another class called @WindowsFormsHost@ allows you to insert WinForms
         <WindowsFormsHost>
             <!--
             the 'wf' namespace here refers to .NET's 
-            System.Windows.Forms assembly, so this TextBox is 
-            from WinForms
+            System.Windows.Forms assembly, so this TextBox 
+            is from WinForms
             -->
             <wf:TextBox x:Name="password" />
         </WindowsFormsHost>
