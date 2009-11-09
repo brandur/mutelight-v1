@@ -21,11 +21,11 @@ Upon entering the C# world, I realized that business operate a little differentl
 /// <summary>
 /// Processes the event request.
 /// </summary>
-/// <param name="eEventTriggerCode">The event trigger 
+/// <param name="eventTriggerCode">The event trigger 
 /// code.</param>
-/// <param name="oAgencyVehicleData">The agency vehicle 
+/// <param name="agencyVehicleData">The agency vehicle 
 /// data.</param>
-/// <param name="oLocationData">The location data.</param>
+/// <param name="locationData">The location data.</param>
 /// <returns></returns>
 private bool ProcessEventRequest(
 {% endhighlight %}
