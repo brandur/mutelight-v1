@@ -14,7 +14,7 @@ The past few years have seen a plateau in terms of CPU clockspeed, so we haven't
 
 This article contains a few tips to play your HD videos the right way (or at least the best ways I've found to date). I've labeled the article with 1080p, but these suggestions work just as well with 720p HD video or lower.
 
-h2. Networked Media Tank
+h3. Networked Media Tank
 
 If you're willing to try a hardware solution, you can save yourself quite a bit of time installing codecs and messing around with configuration settings on your PC. The idea of a box attached to your TV that can stream media over your network has been around for a while, but it's something that in my opinion, has only really come to fruition recently.
 
@@ -24,7 +24,7 @@ Networked media tanks really are just as awesome as their name suggests. These d
 
 The most popular NMTs are the "Popcorn Hour":http://www.popcornhour.com/ and the "HDX":http://www.hdx1080.com/ (see a "full list of NMTs":http://www.networkedmediatank.com/wiki/index.php/Products), both of which are sleek little boxes that can stream over the network, play from a USB drive, or play from a user-installed internal HDD. You can install other interesting add-ons like a BitTorrent client, NZB downloader or a tool to grab cover art for you. These features are all great, but what's the best part? NMTs tend to weigh in just a little over $200 US, in most cases below the comparatively inadequate competition from big names. Personally, I've only had direct experience with the HDX 1000, and found it absolutely outstanding.
 
-h2. Windows
+h3. Windows
 
 The one HD playback solution under Windows that I'm going to talk about is hardware decoding, where your heavy-lifting is offloaded to your DXVA(DirectX Video Acceleration)-enabled video card. We'll be using Media Player Classic Homecinema so you'll need at least an Nvidia Gefore 8 series, or ATI Radeon HD series card.
 
@@ -41,7 +41,7 @@ Follow these steps to get up and running:
     <p><strong>Fig. 1:</strong> <em>MPC-HC output settings for hardware-accelerated VMR9 playback in Windows</em></p>
 </div>
 
-h2. Mac OS X
+h3. Mac OS X
 
 This one is easy: use "Plex":http://plexapp.com/. Plex (also known as Plexapp) is a fork of XBMC for Intel-based Macintosh computers, and it is _awesome_. Apart from its beautiful and highly-intuitive interface, Plex will use multiple cores to decode HD video, allowing you to play 1080p videos even on your notebook.
 
@@ -54,7 +54,7 @@ Another option, but one I've admittedly never had much luck with, is to use VLC.
 
 Hardware decoding support has begun to appear in Mac OSX as well. Unfortunately, as things stand today, QuickTime is the only application able to access this functionality, and installing Perian to give QuickTime access to decent codec/container support will break hardware decoding (so you can't win). Many people are hoping that Apple's upcoming release of Mac OS X 10.6 (Snow Leopard), which is supposed to move a lot of computing to the GPU(Graphics Processing Unit), will resolve this problem.
 
-h2. Linux
+h3. Linux
 
 As of November 2008, the proprietary Nvidia drivers for Linux (and other Unix-based systems) support video hardware acceleration in the form of an API called Video Decode and Presentation API for Unix (VDPAU). VDPAU is a Unix equivalent to DXVA on Windows and support for it has already been added or is being added to many popular Linux media players. See the "Wikipedia article on VDPAU":http://en.wikipedia.org/wiki/VDPAU for more information on supporting players.
 

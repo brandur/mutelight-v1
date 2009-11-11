@@ -31,7 +31,7 @@ Controls.Add(host);
 
 The @ElementHost@ class is part of a special namespace called @System.Windows.Forms.Integration@. Adding this namespace to your solution is slightly tricky because its DLL is not named as you'd expect; it's actually called @WindowsFormsIntegration@. From the Add Reference dialog window, scroll to the bottom of list in the .NET tab and you should see it.
 
-h2. WinForms in WPF
+h3. WinForms in WPF
 
 Similarly, another class called @WindowsFormsHost@ allows you to insert WinForms controls into a WPF application. Here it is in XAML:
 

@@ -3,7 +3,7 @@ layout: default
 title: Archive
 ---
 
-		<h1>All Articles</h1>
+		<h2>All Articles</h2>
 		<ul class="article">
 			{% for post in site.posts %}
 			<li><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <span class="alternate">&mdash; {{ post.date | date: "%B %d, %Y" }}</span></li>
