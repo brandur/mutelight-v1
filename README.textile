@@ -1,4 +1,4 @@
-== Mutelight
+h1. Mutelight
 
 This is source that builds my blog at "mutelight.org":http://mutelight.org. It compiles with:
 
