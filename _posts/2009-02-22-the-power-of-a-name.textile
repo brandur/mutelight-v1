@@ -1,6 +1,6 @@
 ---
 title: The Power of a Name
-tags: [ 'communication', 'dalecarnegie' ]
+tags: [ 'communication', 'dalecarnegie', 'selfimprovement' ]
 permalink: /articles/the-power-of-a-name.html
 tiny: /a/2
 location: Calgary
