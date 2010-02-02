@@ -1,5 +1,5 @@
 --- 
-output_dir: output
+output_dir: /home/fyrerise/www/mutelight.org/public
 data_sources: 
 - type: filesystem_combined
   items_root: /

@@ -9,18 +9,18 @@ location: Calgary
 
 It seems like there is a bug in NAnt's @<nunit2>@ task that occurs when using NUnit's @ExpectedException@ attribute. There seems to be "an open bug":http://sourceforge.net/tracker/?func=detail&atid=402868&aid=1942863&group_id=31650 related to this problem, but it's status has been unchanged for some time now (since April 2008). I'm using the NAnt 0.86 beta and NUnit 2.5. Here's a simple test for this problem:
 
-{% highlight csharp %}
+<code lang="csharp">
 [Test]
 [ExpectedException(typeof(Exception))]
 public void TestThatExpectedExceptionFails()
 {
     throw new Exception("wef");
 }
-{% endhighlight %}
+</code>
 
 And a NAnt file to build the test's project it and try to run it:
 
-{% highlight xml %}
+<code lang="xml">
 <?xml version="1.0"?>
 
 <project default="default">
@@ -38,7 +38,7 @@ And a NAnt file to build the test's project it and try to run it:
         </nunit2>
     </target>
 </project> 
-{% endhighlight %}
+</code>
 
 Here's what NAnt has to say about that:
 
@@ -92,7 +92,7 @@ Here are my talking points regarding what @Assert.Throws<>@ has over @ExpectedEx
 
 An example that demonstrates the advantages of @Assert.Throws<>@ follows:
 
-{% highlight csharp %}
+<code lang="csharp">
 private void MethodWithArgChecks(string arg1, string arg2)
 {
     if (arg1 == null)
@@ -112,5 +112,5 @@ public void TestForThrownExceptionOnBadArgs()
         () => MethodWithArgChecks("ok", null)
     );
 }
-{% endhighlight %}
+</code>
 

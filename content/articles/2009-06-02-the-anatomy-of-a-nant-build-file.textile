@@ -9,7 +9,7 @@ location: Calgary
 
 Over the weekend I was looking at building a simple NAnt file layout that I could use for building one of my projects. Previously, I'd considered NAnt files to be problematical because they have a tendency of evolving into unmanageable behemoths that are thousands of lines long. For example, the build file we use at my day job is a little over 2600 lines and has a layout like this:
 
-{% highlight xml %}
+<code lang="xml">
 <project name="Unmanageable" default="build">
 
     ...
@@ -41,7 +41,7 @@ Over the weekend I was looking at building a simple NAnt file layout that I coul
         ...
     </target>
 </project>
-{% endhighlight %}
+</code>
 
 Add in 30 or 40 other projects and about 100 lines worth of property definitions and before you know it you've got a file that will turn developers pale at its very mention. That might not be so bad, but because of the way references have to be entered manually under the @<csc>@ tag, everytime you update a reference under one of your projects, it has to be added to the build file as well; so the build file ends up being updated constantly.
 
@@ -59,7 +59,7 @@ h3. A NAnt Solution
 
 Without further ado, I'd like to present a template that I've been using for my projects that can build multiple application targets using MSBuild, and as you'd expect, has testing targets.
 
-{% highlight xml %}
+<code lang="xml">
 <project name="BrandursExcellentTemplate" default="rebuild">
 
     <!-- ============= -->
@@ -145,6 +145,6 @@ Without further ado, I'd like to present a template that I've been using for my 
     </target>
 
 </project>
-{% endhighlight %}
+</code>
 
 One part of the template I'll comment on is the @testimmediate@ target. At work, we used to categorize all our tests using NUnit's category feature, but found over time that we weren't gaining a whole lot of value from the process. Instead of letting categories go to waste, my boss came up with the idea of tagging test fixtures relevant to current features with @[Category("Immediate")]@. That way, developers can run only the immediate category to quickly run the most immediately important tests. I've frequently started using the same concept outside of work as well.

@@ -24,13 +24,14 @@ compile '*' do
     '.md'       => :bluecloth,
     '.markdown' => :bluecloth,
     '.textile'  => :redcloth,
-    nil => :erb
+    nil         => :erb
   }
   
   file_filter = filter_map[item[:extension]]
   raise "Filter is not configured for file extension #{item[:extension]} in Rules file." if file_filter.nil?
   
   filter file_filter
+  filter :pygments
   layout 'default' unless item[:layout] == "none"
 end
 

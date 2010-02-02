@@ -31,7 +31,7 @@ h4. Nested Rules
 
 Less' best feature (IMO) is its support for nested rules. Where in normal CSS you'd have to mark CSS rules with long selectors, you can actually nest selectors inside of other selectors in Less. I tend to write long selectors in CSS because I find that it helps keep display logic out of HTML files, so nesting rules with Less was a natural extension for me.
 
-{% highlight css %}
+<code lang="css">
 /* before */
 div.content
 {
@@ -48,7 +48,7 @@ div.content ol li
     text-align: justify;
     margin: 0 0 8px 0;
 }
-{% endhighlight %}
+</code>
 
 <notextile><div class="highlight"><pre>
 /* after */
@@ -104,12 +104,12 @@ h4. Nested Selector Groups
 
 When writing CSS, it's common practice to group selectors together when they share properties. For example, if we wanted both our normal links and visited links to be blue, we'd write something like the following.
 
-{% highlight css %}
+<code lang="css">
 a:link, a:visited
 {
     color: #00f;
 }
-{% endhighlight %}
+</code>
 
 Naturally, you might want to extend this to Less' nested rules as well.
 
@@ -126,13 +126,13 @@ body
 
 Unfortunately, if you tried to do so, Less would not output your CSS how you intended. Instead, it would write something like this:
 
-{% highlight css %}
+<code lang="css">
 /* this doesn't work as we would have expected */
 body a:link, a:visited
 {
     color: #00f;
 }
-{% endhighlight %}
+</code>
 
 For these groups to work as we intended, both groups would have to the full CSS selector like @body a:link, body a:visited@.
 
