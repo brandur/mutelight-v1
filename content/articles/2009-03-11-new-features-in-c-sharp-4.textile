@@ -1,10 +1,10 @@
 ---
 title: New Features in C# 4.0
+kind: article
 tags: [ 'csharp', 'development', 'dotnet', 'python' ]
 permalink: /articles/new-features-in-c-sharp-4.html
 tiny: /a/5
 location: Calgary
-layout: post
 ---
 
 Admittedly a few months late, here's my recap of the new C# language features being introduced in 4.0, summarized from the "PDC 2008 talk _the Future of C#_ presented by chief architect Anders Hejlsberg":http://channel9.msdn.com/pdc2008/TL16/. Note that this post doesn't cover any of the new parallel features of 4.0.

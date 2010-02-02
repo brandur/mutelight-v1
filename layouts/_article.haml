@@ -1,0 +1,11 @@
+---
+---
+
+%h2= item[:title]
+.content
+    != content || partial(item)
+    %p.meta
+        Posted on 
+        %strong= pretty_time(item[:created_at])
+        from
+        %strong= item[:location]

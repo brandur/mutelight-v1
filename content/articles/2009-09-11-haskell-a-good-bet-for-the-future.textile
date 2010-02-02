@@ -1,10 +1,10 @@
 ---
 title: "Haskell: A Good Bet for the Future"
+kind: article
 tags: [ 'development', 'haskell' ]
 permalink: /articles/haskell-a-good-bet-for-the-future.html
 tiny: /a/18
 location: Calgary
-layout: post
 ---
 
 Everyone is pushing concurrency these days. Recently functional programming has re-emerged into the spotlight because the paradigm is particularly conducive to parallel programming. Three languages that have been getting a special amount of attention are Haskell, Erlang, and Clojure (and all three with good reason!).

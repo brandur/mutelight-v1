@@ -1,10 +1,10 @@
 ---
 title: How to Host a WPF Control in a WinForms Application
+kind: article
 tags: [ 'csharp', 'development', 'dotnet' ]
 permalink: /articles/how-to-host-a-wpf-control-in-a-winforms-application.html
 tiny: /a/17
 location: Calgary
-layout: post
 ---
 
 As people start making the jump from Windows Forms to WPF, many will hit an intermediate phase where it'll be useful to use WPF components in WinForms and vice-versa. Unfortunately, the two frameworks are not directly compatible because WPF uses @Control@ under @System.Windows.Controls@ while WinForms uses @Control@ under @System.Windows.Forms@ &mdash; and in terms of class hierarchies, the two @Control@ classes are completely unrelated.

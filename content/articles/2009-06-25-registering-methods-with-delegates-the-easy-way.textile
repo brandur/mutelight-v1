@@ -1,10 +1,10 @@
 ---
 title: Registering Methods with Delegates the Easy Way
+kind: article
 tags: [ 'csharp', 'development', 'dotnet' ]
 permalink: /articles/registering-methods-with-delegates-the-easy-way.html
 tiny: /a/15
 location: Calgary
-layout: post
 ---
 
 Every C# developer is familiar with the syntax for registering a method to a delegate or event:

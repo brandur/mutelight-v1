@@ -1,10 +1,10 @@
 ---
 title: The Anatomy of a NAnt Build File
+kind: article
 tags: [ development', 'dotnet', 'nant' ]
 permalink: /articles/the-anatomy-of-a-nant-build-file.html
 tiny: /a/10
 location: Calgary
-layout: post
 ---
 
 Over the weekend I was looking at building a simple NAnt file layout that I could use for building one of my projects. Previously, I'd considered NAnt files to be problematical because they have a tendency of evolving into unmanageable behemoths that are thousands of lines long. For example, the build file we use at my day job is a little over 2600 lines and has a layout like this:

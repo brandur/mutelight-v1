@@ -27,6 +27,9 @@ def route_path(item)
   else
     url.gsub!(item[:extension], '.html')
   end
+
+  # Strip leading date
+  url.gsub!(/[0-9]{4}-[01][0-9]-[0-3][0-9]-/, '')
   
   #if url.include?('-')
     #url = url.split('-').join('/')                # /2010/01/01-some_title.html -> /2010/01/01/some_title.html
@@ -103,7 +106,6 @@ def is_front_page?
     @item.identifier == '/'
 end
 
-
 def n_newer_articles(n, reference_item)
   @sorted_articles ||= sorted_articles
   index = @sorted_articles.index(reference_item)
@@ -118,7 +120,6 @@ def n_newer_articles(n, reference_item)
   end
 end
 
-
 def n_older_articles(n, reference_item)
   @sorted_articles ||= sorted_articles
   index = @sorted_articles.index(reference_item)
@@ -132,9 +133,8 @@ def n_older_articles(n, reference_item)
   end
 end
 
-
 def pretty_time(time)
-  Time.parse(time).strftime("%b %d, %Y") if !time.nil?
+  Time.parse(time).strftime("%B %d, %Y") if !time.nil?
 end
 
 def featured_count
@@ -156,12 +156,6 @@ end
 private
 
 def derive_created_at(item)
-  parts = item.identifier.gsub('-', '/').split('/')[1,3]
-  date = '1980/1/1'
-  begin
-    Date.strptime(parts.join('/'), "%Y/%m/%d")
-    date = parts.join('/')
-  rescue
-  end
-  date
+  File.basename(item.identifier).gsub('-', '/').split('/')[0,3].join('/')
 end
+

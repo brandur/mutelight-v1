@@ -1,10 +1,10 @@
 ---
 title: "New .NET 4.0 Feature: Enum.HasFlag()"
+kind: article
 tags: [ 'csharp', 'development', 'dotnet' ]
 permalink: /articles/new-net-4-feature-enum-hasflag.html
 tiny: /a/21
 location: Calgary
-layout: post
 ---
 
 A minor inclusion to the new .NET 4.0 framework is the addition of the @Enum.HasFlag()@ method. It behaves much like you'd expect, allowing you to check whether an enum instance contains a given flag.

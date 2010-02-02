@@ -1,10 +1,10 @@
 ---
 title: Pretty URIs with Google App Engine
+kind: article
 tags: [ 'googleappengine', 'howto', 'python']
 permalink: /articles/pretty-uris-with-google-app-engine.html
 tiny: /a/4
 location: Calgary
-layout: post
 ---
 
 Getting pretty URI/URLs in Google app engine is easy, but the first time I looked I wasn't able to figure out how to do it from Google's documentation, so I've saved some instructions here.

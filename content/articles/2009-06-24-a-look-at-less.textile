@@ -1,10 +1,10 @@
 ---
 title: A Look at Less
+kind: article
 tags: [ 'css', 'development' ]
 permalink: /articles/a-look-at-less.html
 tiny: /a/14
 location: Calgary
-layout: post
 ---
 
 A few weeks ago, I read about a new project called "Less":http://lesscss.org/, a CSS framework that extends CSS by adding a few simple, but extremely useful features. Less' killer concept is it uses existing CSS syntax so that CSS files are automatically valid Less files as well.

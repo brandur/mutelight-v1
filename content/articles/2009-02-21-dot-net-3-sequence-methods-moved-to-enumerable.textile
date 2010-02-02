@@ -1,10 +1,10 @@
 ---
 title: .NET 3.5 Sequence Methods Moved to Enumerable
+kind: article
 tags: [ 'csharp', 'development', 'dotnet' ]
 permalink: /articles/dot-net-3-sequence-methods-moved-to-enumerable.html
 tiny: /a/1
 location: Calgary
-layout: post
 ---
 
 I still see a lot of C# code samples around online that use @Sequence.Range@ to generate a numerical range and @Sequence.Repeat@ to repeat a number. This is a little confusing, because these methods may have been around in the early days of .NET 3.0, but have since moved to @System.Linq.Enumerable@.

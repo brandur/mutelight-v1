@@ -1,11 +1,15 @@
 #!/usr/bin/env ruby
 
-preprocess do
-  create_tag_pages
-  add_missing_info
-end
+require 'fileutils'
 
-compile '/assets/images/*/' do
+preprocess do
+  #create_tag_pages
+  add_missing_info
+
+  # Copy images to output directory
+  assets = config[:output_dir] + '/assets'
+  FileUtils.mkdir_p(assets)
+  FileUtils.cp_r('images', assets)
 end
 
 compile '/assets/css/*/' do
@@ -14,12 +18,12 @@ end
 
 compile '*' do
   filter_map = { 
-    '.erb' => :erb, 
-    '.haml' => :haml,
-    '.html' => :erb, 
-    '.md' => :bluecloth,
+    '.erb'      => :erb, 
+    '.haml'     => :haml,
+    '.html'     => :erb, 
+    '.md'       => :bluecloth,
     '.markdown' => :bluecloth,
-    '.textile' => :redcloth,
+    '.textile'  => :redcloth,
     nil => :erb
   }
   
@@ -38,4 +42,4 @@ route '*' do
   route_path(item)
 end
 
-layout '*', :erb
+layout '*', :haml

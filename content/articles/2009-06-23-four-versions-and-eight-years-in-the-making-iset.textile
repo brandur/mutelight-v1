@@ -1,10 +1,10 @@
 ---
 title: "Four Versions and Eight Years in the Making: ISet"
+kind: article
 tags: [ 'csharp', 'development', 'dotnet' ]
 permalink: /articles/four-versions-and-eight-years-in-the-making-iset.html
 tiny: /a/13
 location: Calgary
-layout: post
 ---
 
 Another addition to .NET 4.0 that I'd previously missed is an interface that most of us had long ago given up on ever seeing in as part of a Microsoft product: the @ISet<T>@ interface. The "set documentation is on MSDN":http://msdn.microsoft.com/en-us/library/dd412081(VS.100).aspx, and if you've previously used the @HashSet@ class, it should look pretty familiar.

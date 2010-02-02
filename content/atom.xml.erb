@@ -1,29 +1,10 @@
 ---
-layout: nil
----
-<?xml version="1.0" encoding="utf-8"?>
+layout: none
+title: Mutelight
+author_name: Brandur Leach
+author_uri: http://mutelight.org
 
-<feed xmlns="http://www.w3.org/2005/Atom">
- 
- <title>Mutelight</title>
- <link href="http://mutelight.org/atom.xml" rel="self"/>
- <link href="http://mutelight.org/"/>
- <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://mutelight.org/</id>
- <author>
-   <name>Mutelight</name>
-   <email>brandur@mutelight.org</email>
- </author>
- 
- {% for post in site.posts %}
- <entry>
-   <title>{{ post.title }}</title>
-   <link href="http://mutelight.org{{ post.url }}"/>
-   <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://mutelight.org{{ post.id }}</id>
-   <content type="html">{{ post.content | xml_escape }}</content>
- </entry>
- {% endfor %}
- 
-</feed>
+---
+
+<%= atom_feed %>
 

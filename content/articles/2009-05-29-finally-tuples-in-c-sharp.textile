@@ -1,10 +1,10 @@
 ---
 title: 'FINALLY: Tuples in C#'
+kind: article
 tags: [ 'csharp', 'development', 'dotnet' ]
 permalink: /articles/finally-tuples-in-c-sharp.html
 tiny: /a/9
 location: Calgary
-layout: post
 ---
 
 It's taken until .NET 4.0, but Microsoft has finally decided to add tuples to the C# language. Here are their prototypes:

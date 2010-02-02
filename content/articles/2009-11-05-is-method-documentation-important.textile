@@ -1,10 +1,10 @@
 ---
 title: Is Method Documentation Important?
+kind: article
 tags: [ development' ]
 permalink: /articles/is-method-documentation-important.html
 tiny: /a/20
 location: Calgary
-layout: post
 ---
 
 Is class and method documentation important when programming? In my experience, this is a question for which the industry has no general answer, to some it is and to others it isn't.

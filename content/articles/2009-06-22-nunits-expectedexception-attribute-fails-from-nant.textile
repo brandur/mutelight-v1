@@ -1,10 +1,10 @@
 ---
 title: NUnit's ExpectedException Attribute Fails from NAnt
+kind: article
 tags: [ 'development', 'dotnet', 'testing' ]
 permalink: /articles/nunits-expectedexception-attribute-fails-from-nant.html
 tiny: /a/12
 location: Calgary
-layout: post
 ---
 
 It seems like there is a bug in NAnt's @<nunit2>@ task that occurs when using NUnit's @ExpectedException@ attribute. There seems to be "an open bug":http://sourceforge.net/tracker/?func=detail&atid=402868&aid=1942863&group_id=31650 related to this problem, but it's status has been unchanged for some time now (since April 2008). I'm using the NAnt 0.86 beta and NUnit 2.5. Here's a simple test for this problem:

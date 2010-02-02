@@ -1,10 +1,10 @@
 ---
 title: Song 2 is Radio's Favourite Track
+kind: article
 tags: [ 'music']
 permalink: /articles/song-2-is-radios-favourite-track.html
 tiny: /a/3
 location: Calgary
-layout: post
 ---
 
 If you listen to a lot of rock on the radio, you may have noticed by now that Blur's _Song 2_ has consistently been a big winner for years, outlasting the vast majority of other popular songs. _Song 2_ is good, upbeat, and people like it, making it a perfect song for the radio.

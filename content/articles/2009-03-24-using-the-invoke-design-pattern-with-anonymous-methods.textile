@@ -1,10 +1,10 @@
 ---
 title: Using the Invoke Design Pattern with Anonymous Methods
+kind: article
 tags: [ 'csharp', 'howto' ]
 permalink: /articles/using-the-invoke-design-pattern-with-anonymous-methods.html
 tiny: /a/8
 location: Calgary
-layout: post
 ---
 
 If you've done Windows forms development in .NET you've almost certainly seen the invoke design pattern before.

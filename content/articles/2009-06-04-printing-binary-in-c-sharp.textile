@@ -1,10 +1,10 @@
 ---
 title: Printing Binary in C#
+kind: article
 tags: [ 'csharp', 'development', 'dotnet' ]
 permalink: /articles/printing-binary-in-c-sharp.html
 tiny: /a/11
 location: Calgary
-layout: post
 ---
 
 I've been looking on and off for the last couple days for a way to easily convert binary data to a hex representation in C# for printing. As it turns out, the @BitConverter@ class is normally used to do this:

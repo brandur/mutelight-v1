@@ -1,0 +1,59 @@
+---
+---
+!!! 1.1
+%html
+    %head
+        %title= @item[:title]
+
+        - # Tiny link for Twitter & co.
+        - if @item[:tiny]
+            %link(rev="canonical" type="text/html" href="http://mutelight.org#{@item[:tiny]}")
+        = render('_static_head')
+
+    %body
+        - content = yield
+        #radial
+            #wrapper
+                #header
+                    %h1.hide
+                        %a(href="http://mutelight.org" title="Mutelight") Mutelight
+                - if @item[:kind] == 'article'
+                    = render('_article', :item => @item, :content => content)
+                    = render('_other_articles', :reference_item => @item)
+                - else
+                    = content
+                #about
+                    %h2.hide About
+                    %p.important
+                        I'm 
+                        %strong Brandur Leach, 
+                        an engineer and developer operating out of Calgary, Canada doing work primarily in C#/.NET. This is Mutelight &mdash; my weblog. You should follow me on 
+                        %a(href="http://twitter.com/fyrerise" title="Brandur on Twitter") Twitter.
+                    %p
+                        My current learning focus is function languages like Clojure, Erland, Haskell, and F#. At the moment I'm learning Haskell by hacking away on a 
+                        %a(href="http://github.com/fyrerise/obsidian" title="Obsidian on GitHub") personal web framework
+                        that uses CouchDB as its datastore.
+                    %p
+                        I like learning guitar, 
+                        %a(href="http://flickr.com/photos/brandurleach" title="Brandur on Flickr") photography
+                        , 
+                        %a(href="http://github.com/fyrerise" title="Brandur on GitHub") coding
+                        , 
+                        %a(href="http://www.last.fm/user/fyrerise" title="Brandur on last.fm") listening to power and symphonic metal
+                        , and tennis. I prefer working on systems with a terminal, but I spend most of my time under Windows at work. Everything that I write is done in Vim.
+                    %div#articles
+                        %a(href="/archive.html" title="Article archive") Archive &rarr;
+                    %p 
+                        E-mail me anytime at 
+                        %strong.mail brandur@mutelight.org.
+                %br
+                %br
+        :javascript
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        :javascript
+            try {
+            var pageTracker = _gat._getTracker("UA-6901854-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+

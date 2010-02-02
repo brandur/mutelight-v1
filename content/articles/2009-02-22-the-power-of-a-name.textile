@@ -1,10 +1,10 @@
 ---
 title: The Power of a Name
+kind: article
 tags: [ 'communication', 'dalecarnegie', 'selfimprovement' ]
 permalink: /articles/the-power-of-a-name.html
 tiny: /a/2
 location: Calgary
-layout: post
 ---
 
 People looking for quick introduction for good social habits (like me) will often start by reading Dale Carnegie's famous book _How to Win Friends and Influence People_. It's an old book, first published in 1936, but every bit of its material still applies today, and will continue to apply as long as humans communicate.
