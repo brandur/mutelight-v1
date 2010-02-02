@@ -1,0 +1,23 @@
+--- 
+output_dir: output
+data_sources: 
+- type: filesystem_combined
+  items_root: /
+  layouts_root: /
+
+# Custom settings
+
+# domain to which this site is deployed
+base_url: http://mgutz.com
+
+# number of full featured posts to display on front
+featured_count: 1
+
+# number of excerpted posts to display on front
+excerpt_count: 2
+
+# number of other articles to reference at bottom of each article
+other_articles_max: 3
+
+# DISQUS Site Shortname (enables commenting)
+disqus_shortname: mgutz-blog

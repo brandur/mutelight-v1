@@ -1,0 +1,41 @@
+#!/usr/bin/env ruby
+
+preprocess do
+  create_tag_pages
+  add_missing_info
+end
+
+compile '/assets/images/*/' do
+end
+
+compile '/assets/css/*/' do
+  filter :less
+end
+
+compile '*' do
+  filter_map = { 
+    '.erb' => :erb, 
+    '.haml' => :haml,
+    '.html' => :erb, 
+    '.md' => :bluecloth,
+    '.markdown' => :bluecloth,
+    '.textile' => :redcloth,
+    nil => :erb
+  }
+  
+  file_filter = filter_map[item[:extension]]
+  raise "Filter is not configured for file extension #{item[:extension]} in Rules file." if file_filter.nil?
+  
+  filter file_filter
+  layout 'default' unless item[:layout] == "none"
+end
+
+route '/assets/css/*/' do
+  item.identifier.chop + '.css'
+end
+
+route '*' do
+  route_path(item)
+end
+
+layout '*', :erb

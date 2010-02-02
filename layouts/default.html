@@ -1,10 +1,12 @@
+---
+---
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
 	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
  
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 
 <head>
-	<title>{{ page.title }}</title>
+    <title><%= @item[:title] %></title>
 
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="author" content="Brandur Leach" />
@@ -20,9 +22,9 @@
 	<link rel="openid2.provider" href="http://www.myopenid.com/server" />
 	<meta http-equiv="X-XRDS-Location" content="http://www.myopenid.com/xrds?username=brandur.myopenid.com" />
 
-	{% if page.tiny %}
-	<link rev="canonical" type="text/html" href="http://mutelight.org{{ page.tiny }}" />
-	{% endif %}
+	<% if @item[:tiny] %>
+	<link rev="canonical" type="text/html" href="http://mutelight.org<%= @item[:tiny] %>" />
+	<% end %>
 
 	<link href="/atom.xml" rel="alternate" title="Mutelight" type="application/atom+xml" />
 
@@ -46,7 +48,11 @@ $(document).ready(function() {
 			<h1 class="hide"><a href="http://mutelight.org" title="Mutelight">Mutelight</a></h1>
 		</div>
 
-	{{ content }}
+<% if @item[:kind] == 'article' %>
+<%= render('_article', :item => @item) %>
+<% elseif %>
+<%= yield %>
+<% end %>
 
 		<div id="about">
 			<h2 class="hide">About</h2>

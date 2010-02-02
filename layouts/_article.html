@@ -1,9 +1,8 @@
 ---
-layout: default
 ---
-            <h2>{{ page.title }}</h2>
+            <h2><%= @item[:title] %></h2>
             <div class="content">
-    {{ content }}
+<%= yield %>
                 <p class="meta">Posted on <strong>{{ page.date | date: "%B %d, %Y" }}</strong> from <strong>{{ page.location }}</strong></p>
             </div>
 
