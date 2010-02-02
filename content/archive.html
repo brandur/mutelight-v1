@@ -1,11 +1,10 @@
 ---
-layout: default
 title: Archive
 ---
 
 		<h2>All Articles</h2>
 		<ul class="article">
-			{% for post in site.posts %}
-			<li><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <span class="alternate">&mdash; {{ post.date | date: "%B %d, %Y" }}</span></li>
-			{% endfor %}
+			<% sorted_articles.each do |item| %>
+			<li><a href="<%= route_path(item) %>" title="<%= item[:title] %>"><%= item[:title] %></a> <span class="alternate">&mdash; <%= pretty_time(item[:created_at]) %></span></li>
+            <% end %>
 		</ul>
