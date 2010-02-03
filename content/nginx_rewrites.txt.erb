@@ -1,0 +1,9 @@
+---
+layout: none
+---
+# Short URIs for articles
+<% for article in sorted_articles %>
+<% if article[:tiny] %>
+rewrite ^<%= article[:tiny] %>$ <%= route_path(article) %> permanent;
+<% end %>
+<% end %>

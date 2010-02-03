@@ -1,9 +1,0 @@
----
-layout: nil
----
-# Short URIs for articles
-{% for post in site.posts %}
-{% if post.tiny %}
-rewrite ^{{ post.tiny }}$ {{ post.url }} permanent;
-{% endif %}
-{% endfor %}
