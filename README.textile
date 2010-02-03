@@ -7,5 +7,5 @@ This is source that builds my blog at "mutelight.org":http://mutelight.org. It c
 
 Built with heavy influence from mgutz's minimalist nanoc3 blog.
 
-All images, as well as content found in the @_posts@ directory is copyright Brandur Leach. All rights reserved.
+All images, as well as content found in the @content@ directory is copyright Brandur Leach. All rights reserved.
 
