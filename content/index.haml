@@ -1,0 +1,12 @@
+---
+title: Mutelight
+---
+
+%h2 Newest Articles
+%ul.article
+    - sorted_articles[0, @config[:featured_count]].each do |item|
+        %li
+            %a(href="#{route_path(item)}" title="#{item[:title]}")
+                = item[:title]
+            %span.alternate &mdash; #{pretty_time(item[:created_at])}
+
