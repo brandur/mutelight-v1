@@ -3,7 +3,7 @@
 
 %h2= item[:title]
 .content
-    != content || partial(item)
+    != find_and_preserve(content || partial(item))
     %p.meta
         Posted on 
         %strong= pretty_time(item[:created_at])

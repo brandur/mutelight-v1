@@ -11,7 +11,7 @@ I still see a lot of C# code samples around online that use @Sequence.Range@ to 
 
 Shown below is today's correct usage for @Range@ and @Repeat@.
 
-<code lang="csharp">
+<notextile><code lang="csharp">
 using System.Linq;
 
 // Generate a range of integers
@@ -23,4 +23,4 @@ IEnumerable<int> nums = Enumerable.Range(3, 7);
 IEnumerable<int> fives = Enumerable.Repeat(5, 3);
 // This will enumerate "string", "string"
 IEnumerable<string> strings = Enumerable.Repeat("string", 2);
-</code>
+</code></notextile>

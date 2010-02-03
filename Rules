@@ -30,8 +30,8 @@ compile '*' do
   file_filter = filter_map[item[:extension]]
   raise "Filter is not configured for file extension #{item[:extension]} in Rules file." if file_filter.nil?
   
-  filter file_filter
   filter :pygments
+  filter file_filter
   layout 'default' unless item[:layout] == "none"
 end
 

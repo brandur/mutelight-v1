@@ -11,7 +11,7 @@ As people start making the jump from Windows Forms to WPF, many will hit an inte
 
 Luckily, Microsoft has had the good sense to give us a workaround. A WinForms application can contain a WPF control by putting the WPF control into an instance of @ElementHost@, a class deriving WinForms' @Control@, and then adding the host to a control collection normally:
 
-<code lang="csharp">
+<notextile><code lang="csharp">
 /* our WPF control */
 MapAnimationLayer animationLayer = new MapAnimationLayer();
 
@@ -27,7 +27,7 @@ ElementHost host = new ElementHost()
 /* now add the ElementHost to our controls collection 
  * normally */
 Controls.Add(host);
-</code>
+</code></notextile>
 
 The @ElementHost@ class is part of a special namespace called @System.Windows.Forms.Integration@. Adding this namespace to your solution is slightly tricky because its DLL is not named as you'd expect; it's actually called @WindowsFormsIntegration@. From the Add Reference dialog window, scroll to the bottom of list in the .NET tab and you should see it.
 
@@ -35,7 +35,7 @@ h3. WinForms in WPF
 
 Similarly, another class called @WindowsFormsHost@ allows you to insert WinForms controls into a WPF application. Here it is in XAML:
 
-<code lang="xml">
+<notextile><code lang="xml">
 <Window x:Class="WinFormsHostWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -52,5 +52,5 @@ Similarly, another class called @WindowsFormsHost@ allows you to insert WinForms
         </WindowsFormsHost>
     </Grid>
 </Window>
-</code>
+</code></notextile>
 

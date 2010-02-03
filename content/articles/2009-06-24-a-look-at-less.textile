@@ -15,14 +15,12 @@ h3. Installation
 
 The install process couldn't be easier. Assuming that you've installed Ruby and RubyGems from your package manager, just run the following command:
 
-<notextile><div class="highlight"><pre>
-gem install less
+<notextile><div class="highlight"><pre>gem install less
 </pre></div></notextile>
 
 After installing Less, a @.less@ file is converted to @.css@ using:
 
-<notextile><div class="highlight"><pre>
-lessc source [destination]
+<notextile><div class="highlight"><pre>lessc source [destination]
 </pre></div></notextile>
 
 h3. Usage
@@ -31,7 +29,7 @@ h4. Nested Rules
 
 Less' best feature (IMO) is its support for nested rules. Where in normal CSS you'd have to mark CSS rules with long selectors, you can actually nest selectors inside of other selectors in Less. I tend to write long selectors in CSS because I find that it helps keep display logic out of HTML files, so nesting rules with Less was a natural extension for me.
 
-<code lang="css">
+<notextile><code lang="css">
 /* before */
 div.content
 {
@@ -48,10 +46,9 @@ div.content ol li
     text-align: justify;
     margin: 0 0 8px 0;
 }
-</code>
+</code></notextile>
 
-<notextile><div class="highlight"><pre>
-/* after */
+<notextile><div class="highlight"><pre>/* after */
 div.content
 {
     ...
@@ -73,10 +70,9 @@ Notice how well the nesting complements lists! A nice side effect of Less is tha
 
 h4. Variables
 
-<notextile><p>Less introduces variables to CSS, a welcome addition to CSS. Using variables is very simple: define them somewhere in your Less file with <code>@&lt;var&gt;: &lt;value&gt;;</code> then refer to them elsewhere with <code>@&lt;var&gt;</code>.</p></notextile>
+<notextile><p>Less introduces variables to CSS, a welcome addition to CSS. Using variables is very simple: define them somewhere in your Less file with <code>@&lt;var&gt;: &lt;value&gt;;</code></notextile> then refer to them elsewhere with <code>@&lt;var&gt;</code></notextile>.</p></notextile>
  
-<notextile><div class="highlight"><pre>
-/* primary text color, for main text body */
+<notextile><div class="highlight"><pre>/* primary text color, for main text body */
 @primary_color: #a9a9a8;
 
 /* secondary text color, for links, alternate text, etc. */
@@ -104,17 +100,16 @@ h4. Nested Selector Groups
 
 When writing CSS, it's common practice to group selectors together when they share properties. For example, if we wanted both our normal links and visited links to be blue, we'd write something like the following.
 
-<code lang="css">
+<notextile><code lang="css">
 a:link, a:visited
 {
     color: #00f;
 }
-</code>
+</code></notextile>
 
 Naturally, you might want to extend this to Less' nested rules as well.
 
-<notextile><div class="highlight"><pre>
-body
+<notextile><div class="highlight"><pre>body
 {
     /* nested groups */
     a:link, a:visited
@@ -126,13 +121,13 @@ body
 
 Unfortunately, if you tried to do so, Less would not output your CSS how you intended. Instead, it would write something like this:
 
-<code lang="css">
+<notextile><code lang="css">
 /* this doesn't work as we would have expected */
 body a:link, a:visited
 {
     color: #00f;
 }
-</code>
+</code></notextile>
 
 For these groups to work as we intended, both groups would have to the full CSS selector like @body a:link, body a:visited@.
 
@@ -140,8 +135,7 @@ h4. String Variables
 
 With the addition of variables, a logical step would be start using them to store string fragments that could be joined with other fragments to build something useful, like a URL:
 
-<notextile><div class="highlight"><pre>
-@my_images: "http://mutelight.org/images/";
+<notextile><div class="highlight"><pre>@my_images: "http://mutelight.org/images/";
 
 body
 {
@@ -155,6 +149,5 @@ h3. Syntax Highlighting in Vim
 
 Of course, Less just wouldn't be as good without some sort of syntax highlighting in Vim! Fortunately, highlighting Less files as CSS works well. Just add the following line to your @~/.vimrc@:
 
-<notextile><div class="highlight"><pre>
-au BufRead,BufNewFile *.less setfiletype css
+<notextile><div class="highlight"><pre>au BufRead,BufNewFile *.less setfiletype css
 </pre></div></notextile>

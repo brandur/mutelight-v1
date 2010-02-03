@@ -9,15 +9,15 @@ location: Calgary
 
 Most .NET developers are familiar with the standard entry point of a WinForms application:
 
-<code lang="csharp">
+<notextile><code lang="csharp">
 Application.Run(new MainForm());
-</code>
+</code></notextile>
 
 I've been finding recently that the name of this method is rapidly becoming outdated as modern Microsoft technology finds its way into more applications. Developers like myself can get the wrong idea about what this method actually does while skimming source code. Therefore, I respectfully propose that Microsoft obsoletes the @Run@ method, and replaces it with something a little more true to form:
 
-<code lang="csharp">
+<notextile><code lang="csharp">
 Application.Crawl(new MainForm());
-</code>
+</code></notextile>
 
 This insight comes from my recent experience installing Expression Blend 3. I'd previously noticed that Microsoft applications seemed to be getting slower after installing the beta for Visual Studio 2010[1], but Microsoft has really taken the Blend installer to the next level.
 

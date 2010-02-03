@@ -2,8 +2,7 @@ h1. Mutelight
 
 This is source that builds my blog at "mutelight.org":http://mutelight.org. It compiles with:
 
-* "Jekyll":http://github.com/mojombo/jekyll &mdash; to build HTML pages by combining layouts with textile documents
-* "Less":http://lesscss.org/ &mdash; to build a working CSS file from the included @.less@ file
+* "nanoc":http://nanoc.stoneship.org/ &mdash; to build HTML pages applying filter and combining layouts with site items
 
 All images, as well as content found in the @_posts@ directory is copyright Brandur Leach. All rights reserved.
 

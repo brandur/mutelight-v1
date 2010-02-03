@@ -15,7 +15,7 @@ C# 4.0's new dynamic features are built on top of .NET's Dynamic Language Runtim
 
 Conventionally, if we received an object from somewhere without a class or interface that we could reference from our code, we'd have to store it as an arbitrary @object@. To make matters worse, if we wanted to call a method on that object, we'd have to use reflection, and we'd end up with some pretty nasty-looking code.
 
-<code lang="csharp">
+<notextile><code lang="csharp">
 // Prior to 4.0, if we received an object with no static 
 // type that we could reference, we'd call a method on it 
 // like this
@@ -27,11 +27,11 @@ object result = calc.GetType().InvokeMember(
     new object[] { 1, 1 }
 );
 int sum = Convert.ToInt32(result);
-</code>
+</code></notextile>
 
 In 4.0, we can improve this situation by using the @dynamic@ keyword. We can store our object as dynamic, and from then on we can make dynamic calls on that object using the well-known dot operator.
 
-<code lang="csharp">
+<notextile><code lang="csharp">
 // After 4.0, we can statically type the object we received 
 // to be dynamic (in the words of Anders Hejlsberg). We can 
 // then call methods dynamically on it using just our normal 
@@ -40,13 +40,13 @@ dynamic calc = someObject.GetCalculator();
 // Note that when we assign the result of our dynamic call 
 // to a variable, that result is converted dynamically
 int sum = calc.Add(1, 1);
-</code>
+</code></notextile>
 
 Unfortunately, the @dynamic@ keyword will come with some classic drawbacks of dynamically-typed languages; the most noticeable of which to VS users may be that statement completion on dynamic objects will not be possible. Other problems will be that fewer errors can be caught at compile time, and that runtime performance will not be as good as it is for static objects.
 
 Anders points out that the objective of these new dynamic features is not to make C# a dynamically-typed language, but to make it less painful to talk to dynamic portions of your code when doing so is necessary (for example, talking to JavaScript from Silverlight).
 
-<code lang="python">
+<notextile><code lang="python">
 def GetCalculator():
     return Calculator()
 
@@ -55,11 +55,11 @@ def GetCalculator():
 class Calculator():
     def Add(self, x, y):
         return x + y
-</code>
+</code></notextile>
 
 The Python code shown above is a possible implementation for the arbitrary calculator object referenced in the previous code samples. The code shown below illustrates how this Python code could be used from a C# program.
 
-<code lang="csharp">
+<notextile><code lang="csharp">
 dynamic pythonCalc = 
     Python.CreateRuntime().UseFile("Calculator.py");
 
@@ -73,13 +73,13 @@ TimeSpan twoDays = calc.Add(
     TimeSpan.FromDays(1), 
     TimeSpan.FromDays(1)
 );
-</code>
+</code></notextile>
 
 h3. Optional and Named Parameters
 
 Reinforcing their long-standing reputation of being late to the game, Microsoft has finally decided to implement optional and named parameters in C#. Below shows two @TimeSpan@ constructors and a possible new revision of them using optional parameters.
 
-<code lang="csharp">
+<notextile><code lang="csharp">
 // Methods that previously had to have multiple overloads 
 // like this
 public TimeSpan(int hours, int minutes, int seconds)
@@ -98,11 +98,11 @@ public TimeSpan(int seconds = 0, int minutes = 0,
 // how it probably would have been designed in the start 
 // had this language feature existed then.)
 { ... }
-</code>
+</code></notextile>
 
 Methods written this way can be called in a wide range of different ways as long as all their required parameters are present. Named parameters are written like _parameter name_: _value_.
 
-<code lang="csharp">
+<notextile><code lang="csharp">
 // 10 seconds
 var t1 = new TimeSpan(10);
 
@@ -118,13 +118,13 @@ var t4 = new TimeSpan(10, days: 7);
 // 7 days, 24 hours, 20 minutes, 10 seconds
 var t5 = new TimeSpan(days: 7, hours: 25, minutes: 20, 
                       seconds: 10);
-</code>
+</code></notextile>
 
 h3. Improved COM Interoperability
 
 Up until 4.0, many COM interop calls were messy ordeals involving many unused parameters, all of which had to be using @ref@.
 
-<code lang="csharp">
+<notextile><code lang="csharp">
 object fileName = "My Document.docx";
 object missing  = System.Reflection.Missing.Value;
 
@@ -134,13 +134,13 @@ doc.SaveAs(ref fileName,
            ref missing, ref missing, ref missing, 
            ref missing, ref missing, ref missing, 
            ref missing, ref missing, ref missing);
-</code>
+</code></notextile>
 
 C# 4.0 will finally resolve this issue with the introduction of optional parameters and making @ref@ optional.
 
-<code lang="csharp">
+<notextile><code lang="csharp">
 doc.SaveAs("My Document.docx");
-</code>
+</code></notextile>
 
 This improvement has been made possible by:
 
@@ -154,7 +154,7 @@ h3. Co- and Contra-variance
 
 Remember that objects which are co-variant can be treated as less derived.
 
-<code lang="csharp">
+<notextile><code lang="csharp">
 string[] strings = GetStringArray();
 ProcessUnsafely(strings);
 
@@ -163,11 +163,11 @@ void ProcessUnsafely(object[] objects)
     objects[0] = "Okay";
     objects[1] = new TimeSpan(); // Not okay
 }
-</code>
+</code></notextile>
 
 C# generics have always been invariant, but in C# 4.0 they will be safely co-variant.
 
-<code lang="csharp">
+<notextile><code lang="csharp">
 // This code would previously not have compiled
 List<string> strings = GetStringList();
 ProcessSafely(strings);
@@ -177,11 +177,11 @@ void ProcessSafely(IEnumerable<object> objects)
     // Safety comes from the fact that IEnumerable cannot 
     // be changed
 }
-</code>
+</code></notextile>
 
 Co-variance is implemented on an interface using the @out@ keyword on any co-variant type parameters.
 
-<code lang="csharp">
+<notextile><code lang="csharp">
 public interface IEnumerable<out T>
 {
     IEnumerable<T> GetEnumerator();
@@ -192,11 +192,11 @@ public interface IEnumerator<out T>
     T Current { get; }
     bool MoveNext();
 }
-</code>
+</code></notextile>
 
 Contra-variance can also be implemented using the @in@ keyword. Remember that objects which are contra-variant can be treated as more derived.
 
-<code lang="csharp">
+<notextile><code lang="csharp">
 public interface IComparer<in T>
 {
     int Compare(T x, T y);
@@ -205,7 +205,7 @@ public interface IComparer<in T>
 // Legal
 IComparer<object> objComparer = GetComparer();
 IComparer<string> strComparer = objComparer;
-</code>
+</code></notextile>
 
 A few notes on co- and contra-variance to remember:
 
