@@ -3,6 +3,9 @@ h1. Mutelight
 This is source that builds my blog at "mutelight.org":http://mutelight.org. It compiles with:
 
 * "nanoc":http://nanoc.stoneship.org/ &mdash; to build HTML pages applying filter and combining layouts with site items
+* "Pygments":http://pygments.org/ &mdash; a Python syntax highlighter that supports a lot of different languages
+
+Built with heavy influence from mgutz's minimalist nanoc3 blog.
 
 All images, as well as content found in the @_posts@ directory is copyright Brandur Leach. All rights reserved.
 

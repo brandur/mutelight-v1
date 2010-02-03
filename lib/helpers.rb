@@ -7,13 +7,13 @@ require 'time'
 
 # Hyphens are converted to sub-directories in the output folder.
 #
-# If a file has two extensions like Rails naming conventions, then the first extension
-# is used as part of the output file.
+# If a file has two extensions like Rails naming conventions, then the first 
+# extension is used as part of the output file.
 #
 #   sitemap.xml.erb # => sitemap.xml
 #
-# If the output file does not end with an .html extension, item[:layout] is set to 'none'
-# bypassing the use of layouts.
+# If the output file does not end with an .html extension, item[:layout] is 
+# set to 'none' bypassing the use of layouts.
 # 
 def route_path(item)
   # in-memory items have no file
@@ -54,7 +54,8 @@ def create_tag_pages
   end
 end
 
-# Dates may be encoded in the filename instead of the meta section at the top of each file.
+# Dates may be encoded in the filename instead of the meta section at the top 
+# of each file.
 def add_missing_info
   items.each do |item|
     if item[:file]
@@ -66,16 +67,6 @@ def add_missing_info
     # sometimes nanoc3 stores created_at as Date instead of String causing a bunch of issues
     item[:created_at] = item[:created_at].to_s if item[:created_at].is_a?(Date)
   end
-end
-
-def partial(identifier_or_item)
-  item = !item.is_a?(Nanoc3::Item) ? identifier_or_item : item_by_identifier(identifier_or_item)
-  item.compiled_content(:snapshot => :pre) 
-end
-
-def item_by_identifier(identifier)
-  items ||= @items
-  items.find { |item| item.identifier == identifier }
 end
 
 #=> { 2010 => { 12 => [item0, item1], 3 => [item0, item2]}, 2009 => {12 => [...]}}
@@ -102,59 +93,20 @@ def articles_by_year_month
   result
 end
 
+# Checks whether the current page is the front page
 def is_front_page?
     @item.identifier == '/'
 end
 
-def n_newer_articles(n, reference_item)
-  @sorted_articles ||= sorted_articles
-  index = @sorted_articles.index(reference_item)
-  
-  # n = 3, index = 4
-  if index >= n
-    @sorted_articles[index - n, n]
-  elsif index == 0
-    []
-  else # index < n
-    @sorted_articles[0, index]
-  end
-end
-
-def n_older_articles(n, reference_item)
-  @sorted_articles ||= sorted_articles
-  index = @sorted_articles.index(reference_item)
-  
-  # n = 3, index = 4, length = 6
-  length = @sorted_articles.length
-  if index < length
-    @sorted_articles[index + 1, n]
-  else
-    []
-  end
-end
-
+# Prettifies a time given as a parseable string for UI display
 def pretty_time(time)
   Time.parse(time).strftime("%B %d, %Y") if !time.nil?
 end
 
-def featured_count
-  @config[:featured_count].to_i
-end
-
-def excerpt_count
-  @config[:excerpt_count].to_i
-end
-
-def disqus_shortname 
-  @config[:disqus_shortname]
-end
-
-def to_month_s(month)
-  Date.new(2010, month).strftime("%B")
-end
-
 private
 
+# Determines when an article was created given its filename. This relies on 
+# articles being in the format 'yyyy-mm-dd-some-article-name.xxx'.
 def derive_created_at(item)
   File.basename(item.identifier).gsub('-', '/').split('/')[0,3].join('/')
 end

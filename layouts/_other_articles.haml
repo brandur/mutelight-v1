@@ -2,9 +2,9 @@
 ---
 
 - max = config[:other_articles_max].to_i
-%h2 Other Articles
+%h2 Newest Articles
 %ul.article
-    - n_older_articles(max, reference_item).each do |item|
+    - sorted_articles[0, config[:other_articles_max]].each do |item|
         %li
             %a(href="#{route_path(item)}" title="#{item[:title] || ''}")
                 = item[:title]
