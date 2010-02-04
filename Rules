@@ -13,7 +13,7 @@ preprocess do
 end
 
 compile '/assets/css/*/' do
-    filter :less
+    filter :sass
 end
 
 compile '*' do

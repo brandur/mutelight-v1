@@ -1,0 +1,227 @@
+---
+---
+
+/* Mutelight */
+
+//***************************************************************************//
+
+// color used for headers: h1, h2, etc.
+!header_color = #bdbd8c
+
+// primary text color, used for main text body
+!primary_color = #a9a9a8
+
+// secondary text color, used for links, alternate text, etc.
+!secondary_color = #7d7b88
+
+// tertiary text color, used when primary and secondary won't do
+!tertiary_color = #5d5b68
+
+// color used for highlights
+!highlight_color = #fff
+
+// color used for various borders
+!border_color = #3c253b
+ 
+//***************************************************************************//
+
+/* fix for font rendering in Safari */
+*
+    text-shadow: #000000 0 0 0px
+
+a
+    color= !secondary_color
+
+a:link, a:visited
+    text-decoration: underline
+
+a:hover
+    text-decoration: none
+
+body
+    color= !primary_color
+    font-family: tahoma, sans-serif
+    font-size: 11px
+    background: #000 url('/assets/images/back.jpg') repeat
+    margin: 0
+    padding: 0
+    border: 0
+
+code
+    color= !highlight_color
+
+img
+    border: 0
+    margin: 0
+
+p
+    text-align: justify
+
+strong
+    color: !highlight_color
+    font-weight: bold
+
+//***************************************************************************//
+
+div#radial
+    background: transparent url('/assets/images/radial.jpg') no-repeat
+    width: 868px
+    margin: 0 auto
+
+    div#wrapper
+        width: 478px
+        margin: 0 auto
+
+        h2
+            color= !header_color
+            font-family: georgia, serif
+            font-size: 20px
+            font-weight: normal
+            padding: 0 12px
+
+        .alternate
+            color= !secondary_color
+
+        .hide
+            display: none
+
+        .mail
+            color: !highlight_color
+
+        .important
+            color: !highlight_color
+            font-size: 13px
+
+        div.content
+            font-family: arial, sans-serif
+            line-height: 1.5em
+            font-size: 12px
+            border-bottom= 2px solid !border_color
+            border-top= 2px solid !border_color
+            margin: 0 7px
+            padding: 0 5px
+
+            h3
+                color= !header_color
+                font-family: georgia, serif
+                font-size: 17px
+                font-weight: normal
+                padding: 0
+
+            h4
+                color= !header_color
+                font-family: tahoma, sans-serif
+                font-size: 12px
+                font-weight: bold
+                padding: 0
+
+            div.figure
+                background: #000
+                border= 1px solid !border_color
+                font-size: 8pt
+                margin: 0
+                padding: 14px 16px
+                position: relative
+
+                img
+                    display: block
+                    margin: 20px auto
+
+                p
+                    margin: 0
+
+            ol
+                padding: 0 0 0 20px
+
+                li
+                    text-align: justify
+                    margin: 0 0 8px 0
+
+            ul
+                padding: 0 0 0 20px
+
+                li
+                    text-align: justify
+                    margin: 0 0 8px 0
+
+            p.footnote
+                sup
+                    color= !highlight_color
+
+            p.meta
+                color= !secondary_color
+                font-size: 8pt
+                font-style: italic
+
+            p.quote
+                color= !highlight_color
+                font-style: italic
+                margin: 20px 19px
+
+            span.addendum
+                color= !tertiary_color
+
+        div#about
+            font-family: arial, sans-serif
+            line-height: 1.5em
+            font-size: 12px
+            background: #20232d
+            position: relative
+            top: 9px
+            height: 250px
+            margin: 0 10px
+            padding: 3px 10px 0 10px
+            /* all opacity attributes */
+            opacity: 0.8
+            filter: alpha(opacity=80)
+            -moz-opacity: 0.8
+            -khtml-opacity: 0.8
+
+            div#articles
+                float: right
+                vertical-align: bottom
+
+                a
+                    text-decoration: none
+                    display: block
+                    text-align: center
+                    line-height: 22px
+                    background: #30333d
+                    width: 80px
+                    margin: -2px 0 0 0
+
+                a:hover
+                    color= !highlight_color
+                    background: #50535d
+
+        div#header
+            background: transparent url('/assets/images/header.png') no-repeat
+            width: 478px
+            height: 320px
+            border: 0
+            padding: 0
+            cursor: pointer
+
+        ul.article
+            list-style-type: none
+            margin: 0 10px 0 10px
+            padding: 0 0 10px 0
+            border-top= 1px solid !border_color
+
+            li
+                padding: 7px 10px
+                border-bottom= 1px solid !border_color
+
+                a
+                    color: #c9c9c8
+
+                a:link
+                    text-decoration: none
+
+                a:visited
+                    text-decoration: none
+
+                a:hover
+                    text-decoration: underline
+
+//***************************************************************************//
