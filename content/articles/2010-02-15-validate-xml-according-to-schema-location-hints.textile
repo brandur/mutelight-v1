@@ -1,0 +1,45 @@
+---
+title: Validate XML According to Schema Location Hints
+kind: article
+tags: [ 'development', 'dotnet' ]
+permalink: /articles/validate-xml-according-to-schema-location-hints.html
+tiny: /a/24
+location: Calgary
+---
+
+For those of us unfortunate enough to still be writing XML documents, it's fairly common practice to "hint" at the location of an XSD schema for a document using attributes in its root node:
+
+<notextile><code lang="xml">
+<?xml version="1.0" encoding="utf-8" ?>
+
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+      xsi:noNamespaceSchemaLocation="file:Schema.xsd">
+    ...
+</root>
+</code></notextile>
+
+While working with .NET's @XPathDocument@ in C#, I noticed that when using this class with just a URI string argument, it will not validate against your schema. The following code throws no exception even if your XSD indicates an invalid file:
+
+<notextile><code lang="csharp">
+using System.Xml.XPath;
+
+XPathDocument d = new XPathDocument("path/to/file.xml");
+</code></notextile>
+
+Properly validating your XML involves giving the @XPathDocument@ an @XmlReader@ instance that's been setup to respect schema location hints:
+
+<notextile><code lang="csharp">
+using System.Xml;
+using System.Xml.Schema;
+using System.Xml.XPath;
+
+XmlReader r = XmlReader.Create(
+    "path/to/file.xml", 
+    new XmlReaderSettings() {
+        ValidationType  = ValidationType.Schema, 
+        ValidationFlags = 
+            XmlSchemaValidationFlags.ProcessSchemaLocation, 
+    }
+);
+XPathDocument d = new XPathDocument(r);
+</code></notextile>
