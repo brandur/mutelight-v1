@@ -14,11 +14,11 @@ string s = System.BitConverter.ToString(
     new byte[] { 1, 15, 17 }
 );
 // s contains: "01-0F-11"
-{% endhighlight %}
+</code></notextile>
 
 It's also handy for packing and unpacking binary data:
 
-{% highlight csharp %}
+<notextile><code lang="csharp">
 // Given an integer, the converter always returns a 4-byte 
 // array. The length of this array will depend on the data 
 // type it's given.
