@@ -41,6 +41,8 @@ TEMPLATE
     FileUtils.mkdir_p(path) if !File.exists?(path)
     File.open(full_path, 'w') { |f| f.write(template) }
     $stdout.puts "\t[ok] Edit #{full_path}"
+    # Symbolic link to make editing the current article easier
+    `ln -f -s #{full_path} current_article`
   end
 
   def calc_path(title)

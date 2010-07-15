@@ -1,4 +1,5 @@
 output/*
 tmp/*
+current_article
 file_changes.yaml
 
