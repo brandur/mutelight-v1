@@ -13,7 +13,7 @@ While developing .NET projects, it's useful to have a set of simple tasks that a
 * You can build your solution and run its tests without opening <acronym title="Visual Studio">VS</acronym>
 * During development, you can run your test suite without going through VS, which is tempermental and can be slow to respond to input
 * In the case of ASP.NET, you can start a development server to view your application
-* For free, you get easy command for use with your <acronym title="Continuous Integration">CI</acronym> server
+* For free, you get easy commands for use with your <acronym title="Continuous Integration">CI</acronym> server
 
 ### History
 
