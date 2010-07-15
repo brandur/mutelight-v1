@@ -45,7 +45,7 @@ I'm going to provide a small walkthrough on how to get a Ruby environment instal
 
 Ruby Gems are small software libraries that extend the core language. In most Ruby projects, a large number of Gems are usually needed, and to help manage these dependencies, a package called [Bundler](http://gembundler.com/) was written.
 
-We'll only need a few Gems for our simple build file, but it's best to use Bundler anyway because it's easy and our complexity may increase later on. Project Gem dependencies are track in a file called `Gemfile`, create one in your solution's root with the following contents:
+We'll only need a few Gems for our simple build file, but it's best to use Bundler anyway because it's easy and our complexity may increase later on. Project Gem dependencies are tracked in a file called `Gemfile`, create one in your solution's root with the following contents:
 
 <code lang="ruby">source 'http://rubygems.org'
 
