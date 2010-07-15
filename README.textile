@@ -11,5 +11,5 @@ All images, as well as content found in the @content@ directory is copyright Bra
 
 h2. Deployment
 
-Compile the site with @nanoc compile@, and it should deploy according to rules in @config.yaml@. Create a new article from a template with @rake create:article title="my new article t itle"@.
+Compile the site with @nanoc compile@, and it should deploy according to rules in @config.yaml@. Create a new article from a template with @rake create:article title="my new article title"@.
 
