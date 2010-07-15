@@ -1,7 +1,7 @@
 --- 
 output_dir: /home/fyrerise/www/mutelight.org/public
 data_sources: 
-- type: filesystem_combined
+- type: filesystem_unified
   items_root: /
   layouts_root: /
 
@@ -18,3 +18,6 @@ other_articles_max: 3
 
 # DISQUS Site Shortname (enables commenting)
 disqus_shortname: mutelight-blog
+
+# By default, textile is not considered a "textual" extension
+text_extensions: %w( css erb haml htm html js less markdown md php rb sass textile txt )

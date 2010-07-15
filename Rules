@@ -3,8 +3,7 @@
 require 'fileutils'
 
 preprocess do
-    #create_tag_pages
-    add_missing_info
+    add_update_item_attributes
 
     # Copy images to output directory
     assets = config[:output_dir] + '/assets'
@@ -17,22 +16,29 @@ compile '/assets/css/*/' do
 end
 
 compile '*' do
-    filter_map = { 
-        '.erb'      => :erb, 
-        '.haml'     => :haml,
-        '.html'     => :erb, 
-        '.md'       => :bluecloth,
-        '.markdown' => :bluecloth,
-        '.textile'  => :redcloth,
-        nil         => :erb
-    }
-    
-    file_filter = filter_map[item[:extension]]
-    raise "Filter is not configured for file extension #{item[:extension]} in Rules file." if file_filter.nil?
-    
-    filter :pygments
-    filter file_filter
-    layout 'default' unless item[:layout] == "none"
+  filter :pygments
+
+  # item[:extension] returns 'html.erb' for multi-dotted filename
+  ext = item[:extension].nil? ? nil : item[:extension].split('.').last
+
+  if ext == 'erb'
+    filter :erb
+  elsif ext == 'haml' || ext.nil?
+    filter :haml
+  elsif ext == 'md' || ext == 'markdown'
+    filter :erb
+    filter :rdiscount
+  elsif ext == 'textile'
+    filter :erb
+    filter :redcloth
+  else
+    raise "Filter is not configured for #{item.identifier} in Rules file."
+  end
+
+  # use layouts with .html extension or layout specified in meta
+  item[:layout] = "none" unless item[:layout] || File.extname(route_path(item)) == '.html'
+
+  layout 'default' unless item[:layout] == 'none'
 end
 
 route '/assets/css/*/' do
