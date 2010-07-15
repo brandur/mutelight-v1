@@ -17,9 +17,9 @@ While developing .NET projects, it's useful to have a set of simple tasks that a
 
 ### History
 
-The defacto standard for building .NET from the command line used to be a project called [NAnt](http://en.wikipedia.org/wiki/Nant), a port from Java's Ant that built projects and ran tasks based on descriptions in build XML files. A huge drawback to NAnt was that even though VS already knew how to build your solution, that information was locked up in an `.sln` file, and you'd have to define a separate set of instructions for NAnt, forcing you to maintain the build in two places. NAnt build files were also extremely verbose, and would become difficult to maintain for large projects.
+The defacto standard for building .NET from the command line used to be a project called [NAnt](http://en.wikipedia.org/wiki/Nant), a port from Java's Ant that built projects and ran tasks based on descriptions in build XML files. A huge drawback to NAnt was that even though VS already knew how to build your solution, that information was locked up in an `.sln` file, and you'd have to define a separate set of instructions for NAnt, thus forcing you to maintain the build in two places. NAnt build files were also extremely verbose, and would become difficult to maintain for large projects.
 
-Microsoft later introduced their own build tool called [MSBuild](http://en.wikipedia.org/wiki/Msbuild). In its most basic form, MSBuild is an executable that reads a VS solution file, and builds it for you. It also supports more sophisticated tasks that can be defined in MSBuild project files, which have XML syntax similar to NAnt's. 
+Microsoft later introduced their own build tool called [MSBuild](http://en.wikipedia.org/wiki/Msbuild). In its most basic form, MSBuild is an executable that reads a VS solution file, and builds it for you. It also supports more sophisticated tasks that can be defined in MSBuild project files, these files have XML syntax similar to NAnt's. 
 
 They key to MSBuild's usefulness was that you'd give it an output target, and it would resolve all the necessary dependencies for you by reading your solution; no more manually building intermediary DLLs with `csc`. It even became fairly common to use a NAnt build file, but to build using an `<exec>` call to MSBuild instead of using built-in NAnt compilation tasks. In fact, I wrote and [building with MSBuild and NAnt](http://mutelight.org/articles/the-anatomy-of-a-nant-build-file.html) last year.
 
@@ -27,7 +27,7 @@ The problem with both NAnt and MSBuild projects is that they're XML, a markup la
 
 ### Rake
 
-[Rake](http://en.wikipedia.org/wiki/Rakefile) is a build tool commonly used for building projects in the Ruby world. One nice thing about it is that it is both written in Ruby, and allows the user to write build tasks in Ruby, keeping Rakefiles easy to read, and massively powerful with access to the complete Ruby language and all its Gems.
+[Rake](http://en.wikipedia.org/wiki/Rakefile) is a build tool commonly used for building projects in the Ruby world. One nice thing about it is that it is both written in Ruby, *and* allows the user to write build tasks in Ruby, keeping Rakefiles easy to read, and massively powerful with access to the complete Ruby language and all its Gems.
 
 I'm going to provide a small walkthrough on how to get a Ruby environment installed, and getting a Rakefile up and running for a project:
 
