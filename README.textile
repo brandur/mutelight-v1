@@ -9,3 +9,7 @@ Built with heavy influence from mgutz's minimalist nanoc3 blog.
 
 All images, as well as content found in the @content@ directory is copyright Brandur Leach. All rights reserved.
 
+h2. Deployment
+
+Compile the site with @nanoc compile@, and it should deploy according to rules in @config.yaml@. Create a new article from a template with @rake create:article title="my new article t itle"@.
+
