@@ -22,7 +22,7 @@ namespace :create do
     end
 
     # -2 for . and .. then + 1 since we're 1-based
-    tiny = Dir.open(path).collect.length - 1
+    tiny = Dir.open(path).collect.count - 1
 
     template = <<TEMPLATE
 ---
