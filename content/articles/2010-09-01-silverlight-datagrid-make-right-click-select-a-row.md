@@ -1,5 +1,5 @@
 ---
-title: "Silverlight Datagrid: Make Right Click Select a Row"
+title: "Silverlight DataGrid: Make Right-click Select a Row"
 kind: article
 tags: [ 'csharp', 'development', 'dotnet', 'silverlight' ]
 permalink: "/articles/silverlight-datagrid-make-right-click-select-a-row.html"
