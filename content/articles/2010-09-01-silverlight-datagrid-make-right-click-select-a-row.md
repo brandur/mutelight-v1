@@ -43,7 +43,7 @@ private void _grid_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
             .Cast<DataGridRow>()
             .FirstOrDefault();
     if (row != null)
-        m_dataGrid.SelectedItem = row.DataContext;
+        _grid.SelectedItem = row.DataContext;
 }</code>
 
 The code above uses `VisualTreeHelper` to find any `UIElement`s under the mouse when the user performs a right-click. A set of `UIElement`s is returned including grid rows and cells as well as a good number of other elements. We filter this set for an instance of `DataGridRow`, get is bound data item, then tell the grid to select that object.
