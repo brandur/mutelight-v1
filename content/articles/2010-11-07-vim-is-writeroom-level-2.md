@@ -7,7 +7,7 @@ tiny: /a/30
 location: Calgary
 ---
 
-I'm participating in [NaNoWriMo](http://www.nanowrimo.org/) this month and the absolutely critical tool for someone with Internet-fueled ADD like myself is a suite for distraction free writing that will isolate a writer from their busy computer system.
+I'm participating in [NaNoWriMo](http://www.nanowrimo.org/) this month and the absolutely critical tool for someone with Internet-fueled ADD like myself is a suite for distraction free writing that will isolate a writer from their busy computer environment.
 
 The traditional choice on Mac OSX has been WriteRoom, an application that will take the user into a very minimalist fullscreen writing mode. Perfect for the aspiring author.
 
