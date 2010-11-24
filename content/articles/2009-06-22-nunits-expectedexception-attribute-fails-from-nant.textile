@@ -79,7 +79,7 @@ Tests Failed.
 Total time: 1 seconds.
 </pre></div></notextile>
 
-h3. Use Assert.Throws<> Instead
+h2. Use Assert.Throws<> Instead
 
 Prior to finding this bug, I used to use @ExpectedException@ fairly regularly. It wasn't until I started looking for alternatives that work in NAnt that I realized a fairly persuasive argument could be built that @ExpectedException@ isn't the best tool for testing exceptions anyway.
 

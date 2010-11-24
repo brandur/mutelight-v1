@@ -15,7 +15,8 @@ While developing .NET projects, it's useful to have a set of simple tasks that a
 * In the case of ASP.NET, you can start a development server to view your application
 * For free, you get easy commands for use with your <acronym title="Continuous Integration">CI</acronym> server
 
-### History
+History
+-------
 
 The defacto standard for building .NET from the command line used to be a project called [NAnt](http://en.wikipedia.org/wiki/Nant), a port from Java's Ant that built projects and ran tasks based on descriptions in build XML files. A huge drawback to NAnt was that even though VS already knew how to build your solution, that information was locked up in an `.sln` file, and you'd have to define a separate set of instructions for NAnt, thus forcing you to maintain the build in two places. NAnt build files were also extremely verbose, and would become difficult to maintain for large projects.
 
@@ -25,7 +26,8 @@ They key to MSBuild's usefulness was that you'd give it an output target, and it
 
 The problem with both NAnt and MSBuild projects is that they're XML, a markup language that is fundamentally hard to read and write for humans. A new movement appeared that started to use Ruby Rakefiles to to build .NET solutions.
 
-### Rake
+Rake
+----
 
 [Rake](http://en.wikipedia.org/wiki/Rakefile) is a build tool commonly used for building projects in the Ruby world. One nice thing about it is that it is both written in Ruby, *and* allows the user to write build tasks in Ruby, keeping Rakefiles easy to read, and massively powerful with access to the complete Ruby language and all its Gems.
 
@@ -41,7 +43,8 @@ I'm going to provide a small walkthrough on how to get a Ruby environment instal
 
 5. In Cygwin, navigate to your .NET project's path (get to a Windows path using `cd /cygdrive/c/Users/...`)
 
-### Bundler
+Bundler
+-------
 
 Ruby Gems are small software libraries that extend the core language. In most Ruby projects, a large number of Gems are usually needed, and to help manage these dependencies, a package called [Bundler](http://gembundler.com/) was written.
 
@@ -58,7 +61,8 @@ From Cygwin, run `bundle install`. Two dependencies are now installed:
 * **Albacore** &mdash; provides a set of .NET build tasks for Rake
 * **Haml** &mdash; allows us to access the [Sass](http://sass-lang.com/) compiler, which I use for my ASP.NET development for a more literate CSS
 
-### Our Rakefile
+Our Rakefile
+------------
 
 As promised, now it's time for our build file. Create `Rakefile` with these contents (replacing solution, and test project paths appropriately):
 

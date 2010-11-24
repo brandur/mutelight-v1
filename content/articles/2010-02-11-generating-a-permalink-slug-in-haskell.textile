@@ -11,7 +11,7 @@ One of the basic features of any blogging software is a function for generating 
 
 Generating a slug is a pretty straightforward exercise with regular expressions, but might not be quite so obvious in Haskell because of the rather arcane way that the regex libraries are provided.
 
-h3. Regex
+h2. Regex
 
 Regular expressions in Haskell are *weird*. A @Text.Regex.Base@ module provides an interface to a "large variety of possible backends":http://www.haskell.org/haskellwiki/Regular_expressions that do the heavy-lifting. The commonly-used functions in base are @=~@ and @=~~@, both polymorphic, meaning they behave differently depending on the type signature we specify for them. Read "this beautifully written Haskell regex tutorial":http://www.serpentine.com/blog/2007/02/27/a-haskell-regular-expression-tutorial/ to understand this in more depth.
 
@@ -42,7 +42,7 @@ regexReplace regex replacement text = go text []
                      Just (bef, _ , aft) -> go aft (replacement:bef:res)
 </code></notextile>
 
-h3. Bytestrings
+h2. Bytestrings
 
 It's generally recommended for fast code to use the @ByteString@ type rather than the Haskell's built-in string, because the built-in string is considered slow. A Google search will reveal that massive memory usage and speed improvements in real-world applications are attributed to switching from strings to bytestrings.
 
@@ -54,7 +54,7 @@ B.pack "my string"
 
 However, if you have a reasonably recent version of GHC, you can specify the @-XOverloadedStrings@ language option flag to define bytestrings the same way you define strings.
 
-h3. Generating Slugs
+h2. Generating Slugs
 
 Now that we've got the basics in place, we can write a simple function to generate slugs for a blog:
 

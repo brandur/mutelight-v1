@@ -13,7 +13,7 @@ Before I started developing professionally, I used to document voraciously: I wr
 
 I'd worked with at least a few open source projects and with a few well-known APIs that had given me the impression that some coders were even more dedicated to code documentation than I was. A good example of this is "Qt":http://doc.trolltech.com/, a framework that probably has some of the best documentation around.
 
-h3. The C# Ecosystem
+h2. The C# Ecosystem
 
 Upon entering the C# world, I realized that business operate a little differently. I want to say that very little thought is attributed to code docs in business, but unfortunately in the case of many C# shops, the reality is that none is at all. This is at least partly due to the advent of *GhostDoc*, a tool that deconstructs class/method/parameter names into valid C# comment mark-up, and leaves you with pretty, but utterly superfluous, comments like the following:
 
@@ -48,7 +48,7 @@ _(Joking)_
 
 But what if there's a good reason that comments in C# have lost their importance? Visual Studio makes code navigation so elementary that it's as easy to find and read a method's source as it is to look up its documentation. Maybe C# developers have simply learnt that reading docs is the hard way of doing things.
 
-h3. Haskell
+h2. Haskell
 
 A similar phenomena has occurred in the Haskell community as well, but maybe for a different reason. 
 
@@ -56,7 +56,7 @@ The vast majority of Haskell documentation is minimal to the point of absurdity 
 
 I'm going to say that the poor documentation is mainly due to two things: Haskell's very descriptive type system, and that Haskell developers as a general lot are fairly skilled programmers. My question here is, assuming that my second point has any shred of truth, does that mean that skilled programmers don't consider detailed docs useful?
 
-h3. I Have No Conclusion
+h2. I Have No Conclusion
 
 I haven't experienced enough diversity in development environments to draw any meaningful conclusions on this topic, but I'll write some up anyway.
 

@@ -47,7 +47,7 @@ Add in 30 or 40 other projects and about 100 lines worth of property definitions
 
 Not wanting to run into this problem in my own projects, I started looking for a better way to build projects, and quickly discovered the NAnt "@<solution>@ task (NAnt solution task documentation)":http://nant.sourceforge.net/nightly/latest/help/tasks/solution.html. This task can theoretically read a solution or project file, build dependencies, then build the file's target; thus working around the normal NAnt "creep". Sounds great, but it only supports VS 2002 and 2003 solution files, so in practice it's not much use.
 
-h3. MSBuild
+h2. MSBuild
 
 With the release of Visual Studio 2005, Microsoft started to include a new build tool called "MSBuild (MSBuild documentation)":http://msdn.microsoft.com/en-us/library/0k6kkbsd.aspx. In its most basic form, the MSBuild command can be used with a few command line switches to build a VS solution or project: @MSBuild "path/Project.csproj" /v:n /t:Build /p:Configuration=release;OutDir="path/bin/"@
 
@@ -55,7 +55,7 @@ MSBuild is more than just a command though; it can also be used to read an MSBui
 
 For now, I found that calling the MSBuild executable from my NAnt scripts acts like a drop-in replacement for NAnt's @<solution>@ task with one important difference &mdash; MSBuild works.
 
-h3. A NAnt Solution
+h2. A NAnt Solution
 
 Without further ado, I'd like to present a template that I've been using for my projects that can build multiple application targets using MSBuild, and as you'd expect, has testing targets.
 
