@@ -1,7 +1,7 @@
 ---
 ---
 
-%h2= item[:title]
+%h1= item[:title]
 .content
     != find_and_preserve(content || partial(item))
     %p.meta

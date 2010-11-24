@@ -13,9 +13,10 @@
     %body
         - content = yield
         #radial
+        #shift
             #wrapper
                 #header
-                    %h1.hide
+                    %strong.hide
                         %a(href="http://mutelight.org" title="Mutelight") Mutelight
                 - if @item[:kind] == 'article'
                     = render('_article', :item => @item, :content => content)

@@ -3,7 +3,7 @@ def codify(str, lang)
     html_coded = ""
 
     # Use pygmentize, it's very nice
-    open("|/usr/bin/pygmentize -f html -l #{lang}", "w+") do |f|
+    open("|/usr/bin/pygmentize3 -f html -l #{lang}", "w+") do |f|
         # Write the code to standard input of pygmentize.
         f.puts(str)
 
