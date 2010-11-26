@@ -39,7 +39,7 @@ The answer becomes more apparent when we try to combine the data context concept
 
 In the above example, we'd expect `MyControl` to behave like any other framework element and bind its `Content` to `MyContent` on our `ViewModel` resource. Unfortunately, for anyone trying to use this control, it's actually binding its `Content` property to `MyContent` on itself (which probably doesn't even exist). The reason is that we already hard-coded a data context into the control's definition, which will take precedent in this case.
 
-Fortunately, there's an easy way to solve this problem. Instead of specifying our data context on the root of the control itself, we should specify the data context on the control's top-level child element. This is often a `Grid` called `LayoutRoot` which Visual Studio generates automatically.
+Fortunately, there's an easy way to solve this problem. Instead of specifying our data context on the root of the control itself, we should specify the data context on the control's top-level child element. This is often a `Grid` called `LayoutRoot` that Visual Studio generates automatically.
 
 <code lang="xml">
 <UserControl x:Class="MyControl">
