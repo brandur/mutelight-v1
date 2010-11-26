@@ -1,5 +1,5 @@
 ---
-title: "Datacontext In A Custom Control"
+title: "DataContext in a Custom Control"
 kind: article
 tags: [ 'csharp', 'development', 'dotnet', 'xaml', 'silverlight' ]
 permalink: "/articles/datacontext-in-a-custom-control.html"
@@ -12,7 +12,7 @@ In WPF or Silverlight, new developers will often stumble across the concept of _
 
 When building a custom control, a very common technique is set that control's data context back to itself so that child controls can be bound to properties in that same control's code-behind.
 
-<code lang="xaml"><UserControl x:Class="MyControl" ...
+<code lang="xml"><UserControl x:Class="MyControl" ...
     DataContext="{Binding RelativeSource={RelativeSource self}}">
 
     <!-- Only a relative path is needed because data context was set -->
@@ -25,7 +25,7 @@ Did you see the bug in the code above? It's not immediately apparent and takes a
 
 The answer becomes more apparent when we try to combine the data context concept with our new control elsewhere.
 
-<code lang="xaml"><Grid DataContext="{StaticResource ViewModel}">
+<code lang="xml"><Grid DataContext="{StaticResource ViewModel}">
 
     <!-- Here we'd expect this control to be bound to MyContent on our -->
     <!-- ViewModel resource -->
@@ -37,7 +37,7 @@ In the above example, we'd expect `MyControl` to behave like any other framework
 
 Fortunately, there's an easy way to solve this problem. Instead of specifying our data context on the root of the control itself, we should specify the data context on the control's top-level child element. This is often a `Grid` called `LayoutRoot` which Visual Studio generates automatically.
 
-<code lang="xaml"><UserControl x:Class="MyControl">
+<code lang="xml"><UserControl x:Class="MyControl">
 
     <Grid x:Name="LayoutRoot"
         DataContext="{Binding RelativeSource={RelativeSource self}}">
