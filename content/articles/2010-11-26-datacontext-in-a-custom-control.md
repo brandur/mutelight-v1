@@ -13,11 +13,11 @@ In WPF or Silverlight, new developers will often stumble across the concept of _
 When building a custom control, a very common technique is set that control's data context back to itself so that child controls can be bound to properties in that same control's code-behind.
 
 <code lang="xml">
-<UserControl x:Class="MyControl" ...
+<UserControl x:Class="MyControl" 
     DataContext="{Binding RelativeSource={RelativeSource self}}">
 
-    <!-- Only a relative path is needed because data context -->
-    <!-- was set at a higher level                           -->
+    <!-- Only a relative path is needed because data -->
+    <!-- context was set at a higher level           -->
     <TextBlock Text="{Binding Title}" />
 
 </UserControl>
@@ -47,7 +47,8 @@ Fortunately, there's an easy way to solve this problem. Instead of specifying ou
     <Grid x:Name="LayoutRoot"
         DataContext="{Binding RelativeSource={RelativeSource self}}">
 
-        <!-- This child element will still bind the same way! -->
+        <!-- This child element will still bind the -->
+        <!-- same way!                              -->
         <TextBlock Text="{Binding Title}" />
 
     </Grid>
