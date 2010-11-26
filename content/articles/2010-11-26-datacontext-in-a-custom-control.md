@@ -8,7 +8,7 @@ location: Calgary
 created_at: 2010-11-26
 ---
 
-In WPF or Silverlight, new developers will often stumble across the concept of _data context_ when learning about data binding. Data context is a mechanism that allows a framework element to define a data source for itself and its children to use when they participate in data binding. For example, a group box containing a number of associated data fields might specify its data context as some model containing a property for each of those fields. Each child control of that group box only needs to specify a relative binding path containing the name of the property it would like to bind to; linking to a model object containing that property isn't needed, because that model was already set as the data context on a parent element and is inherited.
+In WPF or Silverlight, new developers will often stumble across the concept of _data context_ when learning about data binding. Data context is a mechanism that allows a framework element to define a data source for itself and its children to use when they participate in data binding. For example, a group box containing a number of associated data fields might specify its data context as some model containing a property for each of those fields. Each child control of that group box only needs to specify a relative binding path containing the name of the property it would like to bind to. Linking to a model object containing that property isn't needed because that model was already set as the data context on a parent element and is inherited.
 
 When building a custom control, a very common technique is set that control's data context back to itself so that child controls can be bound to properties in that same control's code-behind.
 
