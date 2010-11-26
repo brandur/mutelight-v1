@@ -3,10 +3,13 @@ title: Archive
 ---
 
 %h1 All Articles
-%ul.article
-    - sorted_articles.each do |item|
-        %li
-            %a(href="#{route_path(item)}" title="#{item[:title]}")
-                = item[:title]
-            %span.alternate &mdash; #{pretty_time(item[:created_at])}
+- articles_by_year.each do |year, items|
+    - if year != Date.today.year
+        %h2= year
+    %ul.article
+        - items.each do |item|
+            %li
+                %a(href="#{route_path(item)}" title="#{item[:title]}")
+                    = item[:title]
+                %span.alternate &mdash; #{pretty_time(item[:created_at])}
 

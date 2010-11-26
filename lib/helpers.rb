@@ -98,6 +98,23 @@ def item_by_identifier(identifier)
   items.find { |item| item.identifier == identifier }
 end
 
+def articles_by_year
+  result = {}
+  current_year = year_h = nil
+
+  sorted_articles.each do |item|
+    d = Date.parse(item[:created_at])
+    if current_year != d.year
+      current_year = d.year
+      year_h = result[current_year] = []
+    end
+
+    year_h << item
+  end
+
+  result
+end
+
 #=> { 2010 => { 12 => [item0, item1], 3 => [item0, item2]}, 2009 => {12 => [...]}}
 def articles_by_year_month
   result = {}

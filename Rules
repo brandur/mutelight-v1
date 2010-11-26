@@ -5,10 +5,11 @@ require 'fileutils'
 preprocess do
     add_update_item_attributes
 
-    # Copy images to output directory
+    # Copy images and JS to output directory
     assets = config[:output_dir] + '/assets'
     FileUtils.mkdir_p(assets)
     FileUtils.cp_r('images', assets)
+    FileUtils.cp_r('js', assets)
 end
 
 compile '/assets/css/*/' do
