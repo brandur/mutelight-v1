@@ -12,32 +12,37 @@ In WPF or Silverlight, new developers will often stumble across the concept of _
 
 When building a custom control, a very common technique is set that control's data context back to itself so that child controls can be bound to properties in that same control's code-behind.
 
-<code lang="xml"><UserControl x:Class="MyControl" ...
+<code lang="xml">
+<UserControl x:Class="MyControl" ...
     DataContext="{Binding RelativeSource={RelativeSource self}}">
 
-    <!-- Only a relative path is needed because data context was set -->
-    <!-- at a higher level                                           -->
+    <!-- Only a relative path is needed because data context -->
+    <!-- was set at a higher level                           -->
     <TextBlock Text="{Binding Title}" />
 
-</UserControl></code>
+</UserControl>
+</code>
 
 Did you see the bug in the code above? It's not immediately apparent and takes a little experience to realize that a user control should never specify its own data context in its definition. But why?
 
 The answer becomes more apparent when we try to combine the data context concept with our new control elsewhere.
 
-<code lang="xml"><Grid DataContext="{StaticResource ViewModel}">
+<code lang="xml">
+<Grid DataContext="{StaticResource ViewModel}">
 
-    <!-- Here we'd expect this control to be bound to MyContent on our -->
-    <!-- ViewModel resource -->
+    <!-- Here we'd expect this control to be bound to -->
+    <!-- MyContent on our ViewModel resource          -->
     <my:MyControl Content="{Binding MyContent}" />
 
-</Grid></code>
+</Grid>
+</code>
 
 In the above example, we'd expect `MyControl` to behave like any other framework element and bind its `Content` to `MyContent` on our `ViewModel` resource. Unfortunately, for anyone trying to use this control, it's actually binding its `Content` property to `MyContent` on itself (which probably doesn't even exist). The reason is that we already hard-coded a data context into the control's definition, which will take precedent in this case.
 
 Fortunately, there's an easy way to solve this problem. Instead of specifying our data context on the root of the control itself, we should specify the data context on the control's top-level child element. This is often a `Grid` called `LayoutRoot` which Visual Studio generates automatically.
 
-<code lang="xml"><UserControl x:Class="MyControl">
+<code lang="xml">
+<UserControl x:Class="MyControl">
 
     <Grid x:Name="LayoutRoot"
         DataContext="{Binding RelativeSource={RelativeSource self}}">
@@ -47,7 +52,8 @@ Fortunately, there's an easy way to solve this problem. Instead of specifying ou
 
     </Grid>
 
-</UserControl></code>
+</UserControl>
+</code>
 
 Framework elements within the control itself can bind using a relative path in the same way, and data context in classes using the control will not be polluted, which will help prevent unexpected side effects.
 
