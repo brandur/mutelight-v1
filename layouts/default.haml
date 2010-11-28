@@ -21,6 +21,19 @@
                 - if @item[:kind] == 'article'
                     = render('_article', :item => @item, :content => content)
                     = render('_other_articles', :reference_item => @item)
+                    #disqus_thread
+                    :javascript
+                        var disqus_shortname = 'mutelight';
+
+                        var disqus_identifier = '#{@item[:tiny]}';
+                        var disqus_url = 'http://mutelight.org#{route_path(item)}';
+
+                        /* * * DON'T EDIT BELOW THIS LINE * * */
+                        (function() {
+                            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                        })();
                 - else
                     = content
                 #about
