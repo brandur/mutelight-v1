@@ -13,19 +13,19 @@ I recently launched a new side project for tracking [my book history](http://bra
 Referrals
 ---------
 
-Often when speaking to friends we'll remember an outstanding book we've read that relates to the subject of conversation that we'd like to recommend. The problem for those of us with poor memories or who go through a lot of books, that title and author name might be difficult to recall--even if it's on the tip of the tongue. A reading list will save these situations, enabling easy lookup and referral.
+Often when speaking to friends we'll remember an outstanding book we've read that relates to the subject of conversation that we'd like to recommend. The problem for those of us with poor memories or who go through a lot of books, that title and author name might be difficult to recall&mdash;even if it's on the tip of the tongue. A reading list will save these situations, enabling easy lookup and referral.
 
 Memory
 ------
 
 Fresh after finishing a book you'll only retain a small portion of all the useful facts and information that it contained. A few months down the road is even worse, you'll only retain a small fraction _of the small fraction_ that you retained originally. After a few years, everything might be gone including the book title. In a way, reading a book is an investment, one where you trade your time for knowledge. If everything you read will be forgotten to a large degree, then you've lost that time invested. Fiction might be an exception to this rule because it's more of a leisure activity.
 
-This concept was my primary motivation for building my [facts project](http://facts.brandur.org) (open sourced on [Github](http://github.com/fyrerise/facts)), useful for breaking a very heavy piece of prose into bits of information that are still meaningful out of context, and which can be digested daily. However, no fancy web application is required, and a plain text file works fine for the purposes of taking down a book's main points.
+This concept was my primary motivation for building my [facts project](http://facts.brandur.org) (open sourced on [Github](http://github.com/fyrerise/facts)), useful for breaking a very heavy piece of prose into bits of information that are still meaningful out of context. This is not to say that a fancy web application is required! A plain text file works fine for the purposes of taking down notes on a book.
 
 Analytics
 ---------
 
-A reading history allows you to easily look up metrics like how many books you've read year to year, or what portion of fiction books you read versus non-fiction. These metrics are useful for determining whether you're maintaining your target reading levels, along with other goal setting.
+A reading history allows you to easily look up metrics like how many books you've read year to year, or what portion of fiction books you read versus non-fiction. These metrics are useful for determining whether you're maintaining target reading levels, along with other goal setting.
 
 Ease
 ----
