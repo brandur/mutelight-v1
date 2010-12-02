@@ -37,7 +37,7 @@ I'm going to provide a small walkthrough on how to get a Ruby environment instal
 
 2. Open a Cygwin shell
 
-3. Download the Rubygems tarball from [Rubyforge](http://rubyforge.org/projects/rubygems/), unpack it, and from Cygwin run `ruby setup.rb install`
+3. Download the Rubygems tarball from [Rubyforge](http://rubyforge.org/projects/rubygems/), unpack it, and from Cygwin run `ruby setup.rb install` (your home directory in Cygwin is at `C:\cygwin\home\fyrerise` by default, a good choice of download location for the tarball)
 
 4. Install Rake with `gem install rake` and Bundler with `gem install bundler`
 
@@ -56,7 +56,7 @@ gem 'albacore'
 gem 'haml' # Includes Sass
 </code>
 
-From Cygwin, run `bundle install`. Two dependencies are now installed:
+Run `bundle install .` (from Cygwin). Two dependencies are now installed:
 
 * **Albacore** &mdash; provides a set of .NET build tasks for Rake
 * **Haml** &mdash; allows us to access the [Sass](http://sass-lang.com/) compiler, which I use for my ASP.NET development for a more literate CSS
