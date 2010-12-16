@@ -13,8 +13,9 @@ PowerShell's `set-alias` command is very limited by its apparent inability to ea
 Fortunately, there's a simple workaround:
 
 <code lang="ruby">
-set-alias vehicles vehiclesfunc
-function vehiclesfunc { invoke-sqlcmd "select * from agencyvehicle" }
+function vehicles { invoke-sqlcmd "select * from agencyvehicle" }
 </code>
 
-It works by creating a function target containing our desired command and aliasing to that function instead of the command directly. It's easy to remember and doesn't come with any harmful side effects.
+Use a function instead! The syntax is concise and doesn't come with any harmful side effects.
+
+<span class="addendum">Edit (2010/12/02) &mdash;</span> more logical to use a function rather than an alias to a function (_duh!_).
