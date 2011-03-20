@@ -5,7 +5,7 @@ tags: []
 permalink: "/articles/the-south-by-southwest-experience.html"
 tiny: /a/41
 location: Calgary
-created_at: 2011-03-15
+created_at: 2011-03-19
 ---
 
 I was down in Austin this year for South by Southwest Interactive, a rapidly growing conference specializing in entrepreneurship, emerging technology, communication, social media, and design, among other things. I attended with the goals of meeting people, seeing Austin's famous tech culture, and getting inspired. I accomplished all of these and more.
