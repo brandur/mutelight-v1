@@ -43,7 +43,7 @@ This was a feature in Screen that was great enough to keep around. Add the follo
 
 ### Command Sequence for Nested Tmux Sessions
 
-Often I'll run a multiplexer inside another multiplexer and need a command sequence to send things to the inner multiplexer. In Screen, this could be accomplished using `C-a a <command>`. This doesn't work out of the box in tmux, but can be fixed with a little configuration.
+Often I'll run a multiplexer inside another multiplexer and need a command sequence to send things to the inner session. In Screen, this could be accomplished using `C-a a <command>`. This doesn't work out of the box in tmux, but can be fixed with a little configuration.
 
 <div class="highlight"><pre>bind-key a send-prefix</pre></div>
 
