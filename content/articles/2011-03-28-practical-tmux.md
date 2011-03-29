@@ -16,6 +16,8 @@ Today I switched over completely from GNU Screen to the more modern BSD-licensed
 
 * **Visual bell that works:** one of the only things under Linux that's come close to driving me completely crazy is the line _Wuff -- Wuff!!_. I mean, I'm all good with programmers having a sense of humour, but this is just too much. Even after disabling the visual bell and doing away with this default message, it's tragically not possible to remove the visual bell from Screen completely.
 
+* **Automatic window renaming:** windows are renamed automatically to the command running in them unless their name has been manually changed using `C-a ,`.
+
 * **Vertical splits:** it's always been a mystery that Screen can do horizontal screen splits but not vertical without fancy patches. Tmux does both out of the box.
 
 * **VI key bindings in copy mode:** VI or Emacs keys are available upon entering tmux's copy mode.
