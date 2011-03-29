@@ -12,6 +12,8 @@ Today I switched over completely from GNU Screen to the more modern BSD-licensed
 
 * **Better redraw model:** I use Awesome WM, a tiling window manager, and terminals containing Screen sessions would glitch out regularly; spewing all kinds of artifacts into their windows. Sufficed to say, tmux doesn't do this.
 
+* **Screen contents persisted through full-screen programs:** in Screen, you lose your terminal's previous contents after leaving a full-screen program like an editor. Tmux doesn't have this problem.
+
 * **Rational configuration:** I once tried to configure my screen's status line, and eventually just gave up. In comparison, tmux's lines like `set -g status-right "#[fg=green]#H` are almost a little _too_ easy. This goes for other configuration values as well.
 
 * **Visual bell that works:** one of the only things under Linux that's come close to driving me completely crazy is the line _Wuff -- Wuff!!_. I mean, I'm all good with programmers having a sense of humour, but this is just too much. Even after disabling the visual bell and doing away with this default message, it's tragically not possible to remove the visual bell from Screen completely.
