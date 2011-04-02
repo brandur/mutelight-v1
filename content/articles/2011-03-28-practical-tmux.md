@@ -115,6 +115,12 @@ if [[ "$tmux_nb" == "0" ]]; then
 else
     # Make sure we are not already in a tmux session
     if [[ -z "$TMUX" ]]; then
+        # Kill defunct sessions first
+        old_sessions=$(tmux ls | egrep "^[0-9]{14}.*[0-9]+\)$" | cut -f 1 -d:)
+        for old_session_id in $old_sessions; do
+            tmux kill-session -t $old_session_id
+        done
+
         echo "Launching copy of base session $base_session ..."
         # Session is is date and time to prevent conflict
         session_id=`date +%Y%m%d%H%M%S`
@@ -130,6 +136,8 @@ else
     fi
 fi 
 </code>
+
+<span class="addendum">Edit (2011/04/01) &mdash;</span> added new script logic so that defunct sessions are killed before starting a new one. Defunct sessions are left behind when tmux isn't quit explicitly.
 
 ### Complete .tmux.conf
 
